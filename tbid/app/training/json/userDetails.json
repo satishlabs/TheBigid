@@ -1,0 +1,21 @@
+{
+  "creationTimestamp": 1496639038000,
+  "lastModifiedTimestamp": 1496639038000,
+  "id": 9,
+  "username": "Chandan",
+  "password": "$2a$10$GqFOzqzsbWAIS4rl7SVgvu6lGERwgmYZtab3e.HH/6NPf8mYolLtq",
+  "email": "chandan@wissen.com",
+  "userType": "USER",
+  "avatarImgPath": "./imgPath/abcd.png",
+  "dateOfBirth": -61571424600000,
+  "lastLoginTimestamp": 1496639038000,
+  "roles": [],
+  "following": [],
+  "followers": ["user_Koushik246","user_Mathew446","user_Andrew684","user_Ronith666","user_Testuser123"],
+  "userId": "user_Chandan123",
+  "pushAvailabilityNo": 3,
+  "country": "India",
+  "longitude": 77.68595210000001,
+  "latitude": 2.9256832,
+  "location":  "RMZ Eco World Rd, Adarsh Palm Retreat, Bellandur, Bengaluru, Karnataka 560103, India"
+}

@@ -1,0 +1,29 @@
+
+<div class="row">
+	<div class="col-lg-2 col-md-2 col-sm-2"></div>
+	<div class="col-lg-8 col-md-8 col-sm-8">
+	
+		<div class="row" ng-show="isLoggedIn">
+			<button user-enter-key-press="callEnterFunc($event)" ng-click="reloadMainWall();clearFlagsOnPageLoad();" class="btn btn-create">Back</button>
+		</div>
+		<br>
+  		   <div class="row alert alert-danger textaligncenter" role="alert" ng-show="rootData.error">
+    			{{rootData.error}}
+  			</div>
+		<div class="row"  ng-show="isLoggedIn">
+			<notification-post 
+				ng-repeat="post in notificationDetailsObj"
+				data="post" 
+				fulldata="notificationpostinfo"
+				userdata="userData" 
+				showreplies="showreplies"
+				showrepliesfunc="showrepliesfunc(replyObj)" 
+				title-char-count="50"
+				body-char-count="100" 
+				show-type-icon="true"
+				expanded-post-id="{{expandedPost}}"> 
+		    </notification-post>
+		</div>
+	</div>
+	<div class="col-lg-2 col-md-2 col-sm-2"></div>
+</div>

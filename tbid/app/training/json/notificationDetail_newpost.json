@@ -1,0 +1,100 @@
+{
+	"notificationDetails": [{
+			"id": 20,
+			"title": "The Republic TV",
+			"body": "Republic TV is an English-language news and current affairs television channel based in Mumbai and Bengaluru, India. The independent news channel went live on May 6, 2017",
+			"tags": ["Debate", "NewsHourWithArnab"],
+			"postType": "GENERAL",
+			"postCategory": "SERIOUS",
+			"postUserInputCategory": "",
+			"postCreatedTime": "Wed May 10 2017 15:26:00 GMT+0530 (India Standard Time)",
+			"locationArea": "Kolkata, West Bengal, India",				
+			"longitude": 88.36389499999996,
+			"latitude": 22.572646,
+			"imgPath": "arnabrepublic.png",
+			"toField": "",
+			"fromField": "",
+			"username": "Rocky",
+			"userId": "user_Rocky686",			
+			"anonymous": false,
+			"nswf": null,
+			"expand": false,
+			"enableNotificationFromUser": false,
+			"eventDate":"",
+			"eventDescription":"",
+			"caption":"",
+			"postQuestion":"",
+			"postThought":"",
+			"postLink":"",
+		    "postDescription":"",
+			"savedPost":false,			    			
+			"voteDetails": {
+				"voteCount": 0,
+				"upVote": false,				
+				"downVote": false,
+				"upVotedTimeByMe": "",
+				"downVotedTimeByMe": "",		
+				"pushActivatedTimeByMe" : "",	
+				"pushCount": 0,									
+				"pushActivate": false,
+				"pushActivated": false,
+				"reportedNSFW": false,
+				"reportedIsNSFW": false,				
+				"reportedNSFWReason": ""
+			},
+			"comments": [ {
+					"commentId": "P1C1",
+					"commentPostedBy": "CommentUser1a",
+					"commentContent": "comment1 -  User1a - 1st Post",
+					"commentUpvoted": false,
+					"commentDownvoted": false,						
+					"commentLikes": 5,
+					"commentPostedTime": "",
+					"replies": [{
+							"replyId": "P1C1R1",
+							"replyCommentBy": "Replier1ForCommentUser1a",
+							"replyCommentContent": "reply1 - comment1 -  User1a - 1st Post",
+							"replyCommentLike": 1,
+							"replyCommentTime": "",
+							"repliedLike": true
+						},
+						{
+							"replyId": "P1C1R2",
+							"replyCommentBy": "Replier2ForCommentUser1a",
+							"replyCommentContent": "reply2 - comment1 -  User1a - 1st Post",
+							"replyCommentLike": 4,
+							"replyCommentTime": "",
+							"repliedLike": false
+						}
+					]
+				},
+				{
+					"commentId": "P1C2",
+					"commentPostedBy": "CommentUser2a",
+					"commentContent": "comment2 -  User2a - 1st Post",
+					"commentUpvoted": false,
+					"commentDownvoted": false,						
+					"commentLikes": 4,
+					"commentPostedTime": "",
+					"replies": [{
+							"replyId": "P1C2R1",
+							"replyCommentBy": "Replier1ForCommentUser2",
+							"replyCommentContent": "reply1 - comment2 -  User2a - 1st Post",
+							"replyCommentLike": 3,
+							"replyCommentTime": "",
+							"repliedLike": false
+						},
+						{
+							"replyId": "P1C2R2",
+							"replyCommentBy": "Replier2ForCommentUser2",
+							"replyCommentContent": "reply2 - comment2 -  User2a - 1st Post",
+							"replyCommentLike": 1,
+							"replyCommentTime": "",
+							"repliedLike": false
+						}
+					]
+
+				}]
+
+		}]
+}

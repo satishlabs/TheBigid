@@ -1,0 +1,655 @@
+*****************************************************************************************
+Passing JSESSIONID in request header as cookie is mandatory for all service running behind authentication.
+Services which run behind authentication are marked with *
+Ex: Cookie:_ga=GA1.1.1388995217.1489144118; JSESSIONID=F38E1B088BB5138452C3FC06E32845FD
+****************************************************************************************
+
+login service
+http method : POST
+http://localhost:8080/login
+Post data : {"username" : "believeMe","password" :"believeMe"}
+Header:
+X-Requested-With:XMLHttpRequest
+Content-Type:application/json
+
+Http Response : either 200 or 401 http status code.
+
+===============
+Get logged in user followers *
+http://localhost:8080/user/followers
+
+================
+Get logged in user following to users *
+http://localhost:8080/user/leaders
+
+================
+service for logged in user to follow user.
+http method : POST,PUT
+http://localhost:8080/user/follow/{username}
+================
+signup user service 
+http method : POST
+http://localhost:8080/user/signup
+post data : {"username":"UniqueName","password":"password11111","passwordConfirm":"password11111","email":"a@a.com","longitude":0.0,"latitude":0.0,"avatarImgPath":null,"dateOfBirth":945714600000,"city":"mumbai"}
+
+================
+
+to get the user iamge based on username images name 
+http method : GET
+http://localhost:8080/user/image/{imagename}
+
+----------------------------------
+to get the userdetails based on username
+http method : GET
+http://localhost:8080/user/{username}
+
+-----------------------------------------
+
+To update the userdetails
+http method : PUT
+
+http://localhost:8080/user/update/{userid}
+Put data :{
+"username":"test1234",
+"userId":"satish_1"
+
+}
+---------------------------------------
+
+
+http://localhost:8080/post/publish *
+{
+    "title": "publishing post using postman",
+    "body": "Lots of my friend always talk about paris, France. But not sure what is so special in paris city ?",
+    "tags": "general,question,query",
+    "postType": "GENERAL",
+    "postCategory": "FUNNY",
+    "longitude": 48.856614,
+    "latitude": 2.352222,
+    "imgPath": "/img/pp/aa/tt",
+    "toField": null,
+    "fromField": null,
+    "anonymous": false,
+    "nswf": false,
+	"isAnonymous":true
+  }
+  
+=================
+get post service *
+http method : get
+http://localhost:8080/post/show/latest?size=5&page=1
+Header : 
+Cookie:JSESSIONID=D83BD7883FE92D52F1FFDCBE6CE301CC
+Content-Type:application/json
+
+Note : if size is not supplied default is 10 and default for page is 1.
+
+=================
+get single post detail by id service *
+http method : get
+http://localhost:8080/post/{postId}
+=================
+
+do downvote *
+http method : get
+http://localhost:8080/post/{postId}/downvote
+
+
+=================
+do upvote *
+http method : get
+http://localhost:8080/post/{postId}/upvote
+
+================
+Get comments for particular post *
+http method : get
+http://localhost:8080/post/1/comments?size=5&page=1
+
+Note : if size is not supplied default is 10 and default for page is 1.
+
+response format :
+[
+  {
+    "id": 19,
+    "body": "Comment - This is the first general post on bigid",
+    "tags": "general,blog",
+    "category": "FUNNY",
+    "longitude": 19.075984,
+    "latitude": 72.877656,
+    "imgPath": "/img/pp/aa/tt",
+    "createdBy": 1,
+    "voteCount": 0,
+    "commentsCount": 0,
+    "isAnonymous": null
+  }
+]
+
+================
+write comment on particular post/reply on comment *
+http method :post
+http://localhost:8080/post/{post_id}/write-comment
+post body :
+{
+    "body": "Lots of my friend always talk about paris, France. But not sure what is so special in paris city ?",
+    "tags": "general,question,query",
+    "postType": "COMMNET",
+    "category": "FUNNY",
+    "longitude": 48.856614,
+    "latitude": 2.352222,
+    "imgPath": "/img/pp/aa/tt",
+    "isAnonymous": false
+  }
+
+
+
+------------------------
+update post tags
+http-method : PUT
+http://localhost:8080/post/{postId}/tags
+{"tag,tag1,tag3"}
+
+-------------------------------
+wirte the comment on post
+http-method : POST
+http://localhost:8080/post/{postId}/comments
+Post data:
+{
+   "commentPostedBy" : "Rajesh",
+   "commentContent": "New Comment",
+   "commentLikes": 0,
+   "likedBy": ""
+}
+----------------------------------------
+http-method : POST
+http://localhost:8080/post/{postId}/replies
+
+{
+        "commentId": 1,
+        "commentPostedBy":"Rajesh",
+      
+        "commentOnPost": 1,
+       
+        "replies": [
+        	{
+			"replyCommentContent": "Please make a reply on commentID 13",
+			"replyCommentBy": "Manish"
+        	}
+        ]
+    }
+	
+------------------------------------------------------------
+http-method : GET
+http://localhost:8080/post/{postId}/commentsreply
+
+---------------------------------------------	
+http-method  : POST
+http://localhost:8080/post/{postId}/upvote
+{
+	"upVote":true,
+	"userId":1
+}
+
+respose data:
+{
+    "id": 1,
+    "postId": 1,
+    "userId": 1,
+    "voteType": "UP",
+    "upVotedTimeByMe": 1499954832000,
+    "downVotedTimeByMe": null,
+    "pushActivatedTimeByMe": null,
+    "pushActivate": true,
+    "reportedNSFW": false,
+    "reportedNSFWReason": null,
+    "voteCount": 1,
+    "upVote": true,
+    "downVote": false,
+    "pushCount": 0
+}
+------------------------------------
+http-method  : POST
+http://localhost:8080/post/{postId}/downvote
+{
+	"downVote":true,
+	"userId":1
+}
+
+response date :
+{
+    "id": 1,
+    "postId": 1,
+    "userId": 1,
+    "voteType": "DOWN",
+    "upVotedTimeByMe": 1499955818000,
+    "downVotedTimeByMe": 1499955819000,
+    "pushActivatedTimeByMe": null,
+    "pushActivate": false,
+    "reportedNSFW": true,
+    "reportedNSFWReason": null,
+    "voteCount": 0,
+    "upVote": false,
+    "downVote": true,
+    "pushCount": 0
+}
+---------------------------------------------
+http-method  : POST
+http://localhost:8080/post/{postId}/pushedvote
+{
+	"pushActivate":true,
+	"userId":1
+}
+
+response-data	
+{
+    "id": 1,
+    "postId": 1,
+    "userId": 1,
+    "voteType": "UP",
+    "upVotedTimeByMe": 1499954832000,
+    "downVotedTimeByMe": null,
+    "pushActivatedTimeByMe": 1499954844000,
+    "pushActivate": true,
+    "reportedNSFW": false,
+    "reportedNSFWReason": null,
+    "voteCount": 3,
+    "upVote": true,
+    "downVote": false,
+    "pushCount": 1
+}
+
+----------------------------------------
+
+http-method :POST
+http://localhost:8080/post/{postId}/isnsfw
+{
+	"reasonForNsfw":"Hello",
+	"reportedNSFW":true,
+	"userId":1
+}
+
+response-data
+{
+    "id": 3,
+    "postId": 1,
+    "userId": 2,
+    "voteType": "DOWN",
+    "upVotedTimeByMe": null,
+    "downVotedTimeByMe": 1500287387000,
+    "pushActivatedTimeByMe": null,
+    "reportedIsNSFWTimeByMe": 1500287440300,
+    "pushActivate": false,
+    "pushActivated": false,
+    "reportedNSFW": true,
+    "reasonForNsfw": true,
+    "reportedIsNSFW": true,
+    "voteCount": -1,
+    "upVote": false,
+    "downVote": true,
+    "pushCount": null
+}
+
+====================================================
+http-method  : GET
+http://localhost:8080/post/heatmapfeeds
+
+[
+    {
+        "country": "Indonesia",
+        "popularity": 2
+    },
+	{
+        "country": "India",
+        "popularity": 5
+    }
+]
+
+-----------------------------------
+http-method  : GET
+http://localhost:8080/post/currentfeeds
+
+{
+    "feedlocations": [
+        {
+            "location": "Indore Indore MP",
+            "title": null,
+            "coordinates": [
+                75.85772580000003,
+                22.7195687
+            ],
+            "postId": 1,
+            "postedBy": "satishpd"
+        },
+        {
+            "location": "Indore Indore MP",
+            "title": "fsdfsd",
+            "coordinates": [
+                75.85772580000003,
+                22.7195687
+            ],
+            "postId": 2,
+            "postedBy": "satishpd"
+        }
+    ]
+}
+
+------------------------------------
+List of all post details;
+http-method : GET
+http://localhost:8080/post/{userId}/list
+
+{
+    "posts": [
+               
+        {
+            "creationTimestamp": 1499969395000,
+            "lastModifiedTimestamp": 1499969395000,
+            "id": 2,
+            "title": "General post from India-mumbai",
+            "body": "This is the first general post on bigid",
+            "tags": [
+                "general",
+                "blog"
+            ],
+            "postType": "GENERAL",
+            "postCategory": "CASUAL",
+            "longitude": 78.96288,
+            "latitude": 20.593684,
+            "imgPath": "/resources/postImg/1499969395393.png",
+            "anonymous": true,
+            "isNSWF": null,
+            "toField": null,
+            "fromField": null,
+            "username": "satishpd",
+            "userId": "satishpd1",
+            "postUserInputCategory": "",
+            "locationArea": null,
+            "country": "India",
+            "postCreatedTime": 1499969393000,
+            "voteCount": null,
+            "expand": false,
+            "followUser": false,
+            "enableNotificationFromUser": false,
+            "popularity": 1,
+            "postDescription": null,
+            "postThoughts": null,
+            "postLink": null,
+            "voteDetails": {
+                "id": null,
+                "postId": 0,
+                "userId": 0,
+                "voteType": null,
+                "upVotedTimeByMe": null,
+                "downVotedTimeByMe": null,
+                "pushActivatedTimeByMe": null,
+                "pushActivate": false,
+                "reportedNSFW": false,
+                "reportedNSFWReason": null,
+                "voteCount": 0,
+                "upVote": false,
+                "downVote": false,
+                "pushCount": null
+            },
+            "comments": [
+                {
+                    "commentId": 7,
+                    "commentPostedBy": "satishpd",
+                    "commentContent": "1st comment",
+                    "commentLikes": 0,
+                    "commentPostedTime": 1499969500000,
+                    "userId": "satishpd1",
+                    "postId": 2,
+                    "replies": [
+                        {
+                            "replyId": 8,
+                            "replyCommentBy": "satishpd",
+                            "replyCommentContent": "1st reply",
+                            "replyCommentLike": 0,
+                            "replyCommentTime": 1499969511000,
+                            "commentId": 7
+                        }
+                    ]
+                    
+                },
+                {
+                    "commentId": 8,
+                    "commentPostedBy": "satishpd",
+                    "commentContent": "2nd comment",
+                    "commentLikes": 0,
+                    "commentPostedTime": 1499969505000,
+                    "userId": "satishpd1",
+                    "postId": 2,
+                    "replies": [
+                        {
+                            "replyId": 9,
+                            "replyCommentBy": "satishpd",
+                            "replyCommentContent": "1st reply",
+                            "replyCommentLike": 0,
+                            "replyCommentTime": 1499969519000,
+                            "commentId": 8
+                        },
+                        {
+                            "replyId": 10,
+                            "replyCommentBy": "satishpd",
+                            "replyCommentContent": "2nd reply",
+                            "replyCommentLike": 0,
+                            "replyCommentTime": 1499969525000,
+                            "commentId": 8
+                        }
+                    ]
+                  
+                }
+            ]
+        },
+        {
+            "creationTimestamp": 1499969444000,
+            "lastModifiedTimestamp": 1499969444000,
+            "id": 3,
+            "title": "General post from Mountain View, CA 94043, USA",
+            "body": "General post from Mountain View, CA 94043, USA",
+            "tags": [
+                "general",
+                "USA",
+                "blog"
+            ],
+            "postType": "GENERAL",
+            "postCategory": "SMALL",
+            "longitude": -104.8617533,
+            "latitude": 38.9983573,
+            "imgPath": "/resources/postImg/1499969444273.png",
+            "anonymous": true,
+            "isNSWF": null,
+            "toField": null,
+            "fromField": null,
+            "username": "satishpd",
+            "userId": "satishpd1",
+            "postUserInputCategory": "",
+            "locationArea": null,
+            "country": "United States",
+            "postCreatedTime": 1499969441000,
+            "voteCount": null,
+            "expand": false,
+            "followUser": false,
+            "enableNotificationFromUser": false,
+            "popularity": 1,
+            "postDescription": null,
+            "postThoughts": null,
+            "postLink": null,
+            "voteDetails": {
+                "id": null,
+                "postId": 0,
+                "userId": 0,
+                "voteType": null,
+                "upVotedTimeByMe": null,
+                "downVotedTimeByMe": null,
+                "pushActivatedTimeByMe": null,
+                "pushActivate": false,
+                "reportedNSFW": false,
+                "reportedNSFWReason": null,
+                "voteCount": 0,
+                "upVote": false,
+                "downVote": false,
+                "pushCount": null
+            },
+            "comments": [
+                {
+                    "commentId": 5,
+                    "commentPostedBy": "satishpd",
+                    "commentContent": "1st comment",
+                    "commentLikes": 0,
+                    "commentPostedTime": 1499969459000,
+                    "userId": "satishpd1",
+                    "postId": 3,
+                    "replies": [
+                        {
+                            "replyId": 4,
+                            "replyCommentBy": "satishpd",
+                            "replyCommentContent": "1st reply",
+                            "replyCommentLike": 0,
+                            "replyCommentTime": 1499969471000,
+                            "commentId": 5
+                        },
+                        {
+                            "replyId": 5,
+                            "replyCommentBy": "satishpd",
+                            "replyCommentContent": "2nd reply",
+                            "replyCommentLike": 0,
+                            "replyCommentTime": 1499969477000,
+                            "commentId": 5
+                        }
+                    ]
+                    
+                },
+                {
+                    "commentId": 6,
+                    "commentPostedBy": "satishpd",
+                    "commentContent": "2nd comment",
+                    "commentLikes": 0,
+                    "commentPostedTime": 1499969463000,
+                    "userId": "satishpd1",
+                    "postId": 3,
+                    "replies": [
+                        {
+                            "replyId": 6,
+                            "replyCommentBy": "satishpd",
+                            "replyCommentContent": "1st repy",
+                            "replyCommentLike": 0,
+                            "replyCommentTime": 1499969485000,
+                            "commentId": 6
+                        },
+                        {
+                            "replyId": 7,
+                            "replyCommentBy": "satishpd",
+                            "replyCommentContent": "2nd reply",
+                            "replyCommentLike": 0,
+                            "replyCommentTime": 1499969491000,
+                            "commentId": 6
+                        }
+                    ]
+                   
+                }
+            ]
+        }
+    ]
+}
+
+
+--------------------------------------
+http-method  : POST
+http://localhost:8080/post/{postId}/upvote
+{
+	"upVote":true,
+	"userId":1
+}
+
+respose data:
+{
+    "id": 1,
+    "postId": 1,
+    "userId": 1,
+    "voteType": "UP",
+    "upVotedTimeByMe": 1499954832000,
+    "downVotedTimeByMe": null,
+    "pushActivatedTimeByMe": null,
+    "pushActivate": true,
+    "reportedNSFW": false,
+    "reportedNSFWReason": null,
+    "voteCount": 1,
+    "upVote": true,
+    "downVote": false,
+    "pushCount": 0
+}
+------------------------------------
+http-method  : POST
+http://localhost:8080/post/{postId}/downvote
+{
+	"downVote":true,
+	"userId":1
+}
+
+response date :
+{
+    "id": 1,
+    "postId": 1,
+    "userId": 1,
+    "voteType": "DOWN",
+    "upVotedTimeByMe": 1499955818000,
+    "downVotedTimeByMe": 1499955819000,
+    "pushActivatedTimeByMe": null,
+    "pushActivate": false,
+    "reportedNSFW": true,
+    "reportedNSFWReason": null,
+    "voteCount": 0,
+    "upVote": false,
+    "downVote": true,
+    "pushCount": 0
+}
+---------------------------------------------
+http-method  : POST
+http://localhost:8080/post/{postId}/pushedvote
+{
+	"pushActivate":true,
+	"userId":1
+}
+
+response-data	
+{
+    "id": 1,
+    "postId": 1,
+    "userId": 1,
+    "voteType": "UP",
+    "upVotedTimeByMe": 1499954832000,
+    "downVotedTimeByMe": null,
+    "pushActivatedTimeByMe": 1499954844000,
+    "pushActivate": true,
+    "reportedNSFW": false,
+    "reportedNSFWReason": null,
+    "voteCount": 3,
+    "upVote": true,
+    "downVote": false,
+    "pushCount": 1
+}
+
+
+----------------------------------
+	http-method :GET
+	http://localhost:8080/post/{commentId}/{userId}/commentvote
+
+----------------------------------
+
+	http-method :PUT
+	http://localhost:8080/user/changepassword/{userId}/{currentPassword}/{newPassword}
+
+================
+
+	 To Share the Post based on userid
+	 http-method :POST
+	 http://localhost:8080/post/shared/{userId}/{postId}
+ 
+====================
+
+	To get the shared post based on userid
+	http-method :GET
+	http://localhost:8080/post/shared/{userId}
+ 
+
+	

@@ -1,0 +1,138 @@
+/* @font-face {
+    font-family: 'robotolight';
+    src: url('../fonts/roboto-light-webfont.woff2') format('woff2'),
+         url('../fonts/roboto-light-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'robotomedium';
+    src: url('../fonts/roboto-medium-webfont.woff2') format('woff2'),
+         url('../fonts/roboto-medium-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'robotoregular';
+    src: url('../fonts/roboto-regular-webfont.woff2') format('woff2'),
+         url('../fonts/roboto-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'robotothin';
+    src: url('../fonts/roboto-thin-webfont.woff2') format('woff2'),
+         url('../fonts/roboto-thin-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+} */
+
+html, body, h1, h2, h3, h4, h5, h6, div, span, p, article, section, a, button audio, video, img{margin: 0; padding: 0; color: #333; font-family: 'robotoregular', "Helvetica Neue", sans-serif;}
+/*html, body{background-color: #b3b3b3; font-size: 15px; height: 100%;}*/
+h1{font-size: 40px; font-family: 'robotothin', 'Helvetica Neue',sans-serif;}
+/*input{width: 100%; box-shadow: none; height: 43px;}*/
+button{box-shadow: none;}
+/*img{width: 100%;}*/
+.margin0{margin: 0 !important;}
+.margin-right20{margin-right: 20px;}
+.main-container{padding-top: 70px; background-color: #fff; height: 100%; padding-bottom: 20px; display: table;}
+.overflow-hidden{overflow: hidden;}
+.textalign-center{text-align: center;}
+.grey-divider{height: 1px; background-color: #ccc; margin: 20px 0;}
+.cursor-pointer{cursor: pointer;}
+/* Top fixed nav styling :: Start */
+.fixed-nav{
+    background-color: #f9f7f9;
+    box-shadow: 0 1px 2px rgba(0,0,0,.5);
+    width: 100%;
+    padding: 0 15px;
+    z-index: 999;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+.fix-nav-container{padding-top: 5px; padding-bottom: 5px;}
+.logo{
+    padding: 0;
+    width: 80px;
+}
+/* Top fixed nav styling :: End */
+/* Login and Sign up buttons styling :: Start */
+.register-buttons{height: 52px;}
+.register-buttons button{
+    margin-top: 10px;
+    width: 90px;
+    border: 1px solid #3367d6;
+    background-color: #fff;
+    color: #3367d6;
+    text-transform: uppercase;
+}
+.register-buttons button.active{
+    background-color: #3367d6;
+    color: #fff;
+    border: 1px solid #2850a7;
+    box-shadow: none;
+}
+/* Login and Sign up buttons styling :: End */
+
+/* Login in page :: Start */
+.form-container h1{padding-bottom: 15px; margin-bottom: 15px; text-align: center; margin-top: 15px;}
+.login-form-container div{margin: 20px 0; position: relative;}
+.login-form-container div label{width: 100%;}
+.login-form-container div input{width: 100%; box-shadow: none; height: 43px; padding-left: 38px;}
+.login-form-container{
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    -webkit-box-shadow: 0 1px 3px 0 rgba(0,0,0,0.16), 0 0 0 1px rgba(0,0,0,0.04);
+    box-shadow: 0 1px 3px 0 rgba(0,0,0,0.16), 0 0 0 1px rgba(0,0,0,0.04);
+    -webkit-transition: box-shadow .3s ease-in-out;
+    transition: box-shadow .3s ease-in-out;
+}
+.login-form-container div span{position: absolute; top: 37px; left: 10px; color: #757575; font-size: 20px;}
+.login-form-container div a.forgot-password{font-weight: 700; color: #3367d6;}
+.login-form-container div a.forgot-password:hover{text-decoration: none; color: #2850a7;}
+.btn-login{
+    width: 90px;
+    border: 1px solid #3367d6;
+    background-color: #fff;
+    color: #3367d6;
+    text-transform: uppercase;
+    box-shadow: none;
+}
+.btn-login:hover{
+    background-color: #3367d6;
+    color: #fff;
+    border: 1px solid #2850a7;
+    transition: background-color .3s ease-in-out;
+}
+.btn-signup{
+    border: 1px solid #3367d6;
+    background-color: #fff;
+    color: #3367d6;
+    text-transform: uppercase;
+    box-shadow: none;
+}
+.btn-signup:hover{
+    background-color: #3367d6;
+    color: #fff;
+    border: 1px solid #2850a7;
+    transition: background-color .3s ease-in-out;
+}
+.login-form-container div.sign-up-footer{
+    font-size: 12px;
+    font-style: italic;
+    text-align: center;
+    color: #909090;
+    font-family: 'robotolight', 'Helvetica Neue',sans-serif;
+}
+.login-form-container div.sign-up-footer a{color: #4691f6;}
+.form-control:focus{
+    border:1px solid #3367d6;
+    -webkit-box-shadow: 0 1px 3px 0 rgba(0,0,0,0.16), 0 0 0 1px rgba(0,0,0,0.04);
+    box-shadow: 0 1px 3px 0 rgba(0,0,0,0.16), 0 0 0 1px rgba(0,0,0,0.04);
+    -webkit-transition: box-shadow .3s ease-in-out;
+    transition: box-shadow .3s ease-in-out;
+}
+/* Login in page :: End */

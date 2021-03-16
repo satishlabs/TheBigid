@@ -1,0 +1,39 @@
+[
+    {
+		"country": "Germany",
+		"popularity": 1
+	},
+	{
+		"country": "United Kingdom",
+		"popularity": 1
+	},
+	{
+		"country": "Brazil",
+		"popularity": 0
+	},
+	{
+		"country": "Canada",
+		"popularity": 1
+	},
+	{
+		"country": "France",
+		"popularity": 0
+	},
+	{
+		"country": "United States",
+		"popularity": 1
+	},
+	{
+		"country": "India",
+		"popularity": 7
+	},
+	{
+		"country": "Russia",
+		"popularity": 0
+	},
+	{
+		"country": "Australia",
+		"popularity": 0
+	}	
+
+]

@@ -1,0 +1,121 @@
+{
+	"postVoteDetails": [
+
+		{
+			"id": 3,
+			"title": "The City of London",
+			"upvote": [{
+					"upvotedBy": "3A",
+					"upvotedTime": "Thu May 25 2017 15:26:00 GMT+0530 (India Standard Time)"
+				},
+				{
+					"upvotedBy": "3B",
+					"upvotedTime": "Wed May 24 2017 18:26:00 GMT+0530 (India Standard Time)"
+				},
+				{
+					"upvotedBy": "3C",
+					"upvotedTime": "Wed May 24 2017 10:26:00 GMT+0530 (India Standard Time)"
+				}				
+			],
+			"downvote": [{
+					"downvotedBy": "3C",
+					"downvotedTime": "Tue May 23 2017 10:26:00 GMT+0530 (India Standard Time)"
+				},
+				{
+					"downvotedBy": "3D",
+					"downvotedTime": "Mon May 22 2017 11:26:00 GMT+0530 (India Standard Time)"
+				}
+			],
+			"push": [{
+					"pushedBy": "3E",
+					"pushActivatedTime": "Fri Jun 2 2017 14:26:00 GMT+0530 (India Standard Time)"
+				},
+{
+					"pushedBy": "3E",
+					"pushActivatedTime": "Thu Jun 1 2017 14:26:00 GMT+0530 (India Standard Time)"
+				}				
+			],
+			"votecount": 5,
+			"upvotecount": 7,
+			"downvotecount": 2,
+			"pushCount": 2
+
+		},
+		
+		{
+			"id": 5,
+			"title": "Design Thinking Event in Bangalore",
+			"upvote": [{
+					"upvotedBy": "5A",
+					"upvotedTime": "Thu May 20 2017 15:26:00 GMT+0530 (India Standard Time)"
+				},
+				{
+					"upvotedBy": "5B",
+					"upvotedTime": "Wed May 24 2017 18:26:00 GMT+0530 (India Standard Time)"
+				}
+			],
+			"downvote": [{
+					"downvotedBy": "5C",
+					"downvotedTime": "Tue May 15 2017 10:26:00 GMT+0530 (India Standard Time)"
+				},
+				{
+					"downvotedBy": "5D",
+					"downvotedTime": "Mon May 14 2017 11:26:00 GMT+0530 (India Standard Time)"
+				}
+			],
+			"push": [],
+			"votecount": 3,
+			"upvotecount": 6,
+			"downvotecount": 2,
+			"pushCount": 0
+
+		},
+		
+		{
+			"id": 6,
+			"title": "Lets go for a long drive!",
+			"upvote": [{
+					"upvotedBy": "6A",
+					"upvotedTime": "Thu May 20 2017 15:26:00 GMT+0530 (India Standard Time)"
+				}
+			],
+			"downvote": [],
+			"push": [{
+					"pushedBy": "6E",
+					"pushActivatedTime": "Thu Jun 1 2017 14:26:00 GMT+0530 (India Standard Time)"
+				}
+			],
+			"votecount": 8,
+			"upvotecount": 5,
+			"downvotecount": 0,
+			"pushCount": 1			
+
+		},
+		
+		{
+			"id": 8,
+			"title": "If Hard Work is the Key to Success, then why is a laborer not Successful?",
+			"upvote": [{
+					"upvotedBy": "8A",
+					"upvotedTime": "Thu May 20 2017 15:26:00 GMT+0530 (India Standard Time)"
+				}
+			],
+			"downvote": [],
+			"push": [{
+					"pushedBy": "8E",
+					"pushActivatedTime": "Mon May 29 2017 14:26:00 GMT+0530 (India Standard Time)"
+				}
+			],
+			"votecount": 6,
+			"upvotecount": 5,
+			"downvotecount": 0,
+			"pushCount": 1			
+
+		}						
+		
+		
+		
+		
+		
+	]
+}

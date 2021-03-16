@@ -1,0 +1,42 @@
+<div class="col-lg-4 col-lg-offset-4 box-shadow marginTop40 generalbgcolor">
+  <div class="alert alert-danger marginTop20" role="alert" ng-show="rootData.error">
+    <!-- <span class="glyphicon glyphicon-remove" ></span> --> {{rootData.error}}
+  </div>
+  <div class="col-lg-12">
+    <tbid-input
+      ng-model = "data.username"
+        showtbidtextfield="yes"
+      check="check()"
+      placeholder="User Name"
+      resource-type="login_userName"
+      resource-name = "userName"
+      focus-me = "false"
+    ></tbid-input>
+  </div>
+  <div class="col-lg-12">
+    <tbid-input
+      ng-model = "data.password"
+      showtbidtextfield="yes"
+      check="check()"
+      placeholder="Password"
+      resource-type="login_password"
+      resource-name = "password"
+      is-passsword = "true"
+    ></tbid-input>
+  </div>
+  <div class="col-lg-12">
+  	<!-- <div class="col-lg-6 color-blue">Forgot Password ?</div> -->
+    <div class="col-lg-10 col-md-offset-2 text-right"><button id="loginbtn" class="btn btn-login" ng-disabled="!submitEnabled" user-enter-key-press="callEnterFunc($event)" ng-click="doSubmit()" class="btn btn-primary">Login</button></div>
+  </div>
+</div>
+<script>
+$(document).keypress(function (event) {
+    if (event.keyCode == 13) {
+        if($("#loginbtn").attr('disabled')){
+            
+        }else{
+        	$("#loginbtn").click();
+        }
+    }
+});
+</script>

@@ -1,0 +1,121 @@
+{
+	"notificationDetails": [{
+			"id": 3,
+			"title": "The City of London",
+			"body": "The Romans created the first established town - a small garrison town they called Londinium - in or just after AD43. So whoever was the General in charge of the Roman army that invaded and conquered Britain - i.e. the first Roman Governor, Aulus Plautius, could be said to have 'discovered' London.",
+			"tags": ["Knowledge", "Quiz", "ToBeKnown", "Interesting"],
+			"postType": "GENERAL",
+			"postCategory": "SMALL",
+			"postUserInputCategory": "",
+			"postCreatedTime": "Wed May 5 2017 15:26:00 GMT+0530 (India Standard Time)",
+			"locationArea": "City of London, London, United Kingdom",				
+			"longitude": -0.09098519999997734,
+			"latitude": 51.5123443,
+			"imgPath": "london.png",
+			"toField": "",
+			"fromField": "",
+			"username": "John",
+			"userId": "user_John123",		
+			"anonymous": false,
+			"nswf": null,
+			"expand": false,
+			"enableNotificationFromUser": true,
+			"eventDate":"",
+			"eventDescription":"",
+			"caption":"",
+			"postQuestion":"",
+			"postThought":"",
+			"postLink":"",
+		    "postDescription":"",
+			"savedPost":false,			    			
+			"voteDetails": {
+				"voteCount": 5,
+				"upVote": false,				
+				"downVote": true,
+				"upVotedTimeByMe": "",
+				"downVotedTimeByMe": "",		
+				"pushActivatedTimeByMe" : "",	
+				"pushCount": 0,									
+				"pushActivate": false,
+				"pushActivated": false,
+				"reportedNSFW": true,
+				"reportedIsNSFW": false,				
+				"reportedNSFWReason": ""
+			},
+			"comments": [{
+					"commentId": "P1C1",
+					"commentPostedBy": "CommentUser1a",
+					"commentContent": "comment1 -  User1a - 1st Post",
+					"upVote": false,
+					"downVote": false,						
+					"voteCount": 5,
+					"commentPostedTime": "",
+					"replies": [{
+							"replyId": "P1C1R1",
+							"replyCommentBy": "Replier1ForCommentUser1a",
+							"replyCommentContent": "reply1 - comment1 -  User1a - 1st Post",
+							"voteCount": 4,
+							"replyCommentTime": "",
+							"upVote": false
+						},
+						{
+							"replyId": "P1C1R2",
+							"replyCommentBy": "Replier2ForCommentUser1a",
+							"replyCommentContent": "reply2 - comment1 -  User1a - 1st Post",
+							"voteCount": 4,
+							"replyCommentTime": "",
+							"upVote": false
+						}
+					]
+				},
+				{
+					"commentId": "P1C2",
+					"commentPostedBy": "CommentUser2a",
+					"commentContent": "comment2 -  User2a - 1st Post",
+					"upVote": false,
+					"downVote": false,						
+					"voteCount": 4,
+					"commentPostedTime": "",
+					"replies": [{
+							"replyId": "P1C2R1",
+							"replyCommentBy": "Replier1ForCommentUser2",
+							"replyCommentContent": "reply1 - comment2 -  User2a - 1st Post",
+							"voteCount": 3,
+							"replyCommentTime": "",
+							"upVote": false
+						},
+						{
+							"replyId": "P1C2R2",
+							"replyCommentBy": "Replier2ForCommentUser2",
+							"replyCommentContent": "reply2 - comment2 -  User2a - 1st Post",
+							"voteCount": 1,
+							"replyCommentTime": "",
+							"upVote": false
+						}
+					]
+
+				},
+				{
+					"commentId": "P1C3",
+					"commentPostedBy": "CommentUser3a",
+					"commentContent": "comment3 -  User3a - 1st Post",
+					"upVote": false,
+					"downVote": false,						
+					"voteCount": 6,
+					"commentPostedTime": "",
+					"replies": []
+				},
+				{
+					"commentId": "P1C4",
+					"commentPostedBy": "CommentUser4a",
+					"commentContent": "comment4 -  User3a - 1st Post",
+					"upVote": false,
+					"downVote": false,						
+					"voteCount": 2,
+					"commentPostedTime": "",
+					"replies": []
+				}
+			]
+
+		}]
+}

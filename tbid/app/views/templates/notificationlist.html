@@ -1,0 +1,38 @@
+
+<div class="row">
+	<div class="col-lg-2 col-md-2 col-sm-2"></div>
+	<div class="col-lg-8 col-md-8 col-sm-8">
+
+		<div class="row notifShowMoreHeader" ng-show="isLoggedIn">
+			<div class="col-lg-4 col-lg-4-offset col-md-11 col-sm-11">
+				<h3 class="generalfontcolor marginTop5">Your Notifications</h3>
+			</div>
+			<div class="col-lg-2 col-md-1 col-sm-1 pull-right">
+				<button user-enter-key-press="callEnterFunc($event)" 
+						ng-click="reloadMainWall();clearFlagsOnPageLoad();"
+						class="btn btn-create">Back</button>
+			</div>
+		</div>
+		<br>
+		<div class="row" ng-show="isLoggedIn">
+			<notification-show-more-item id="{{$index}}"
+				ng-repeat="notifObj in notificationDisplayObj | orderBy : sortByRecentTime : true"
+				notifbyuser="notifObj.byUserName"
+				notifbyuserid="notifObj.byUserId"
+				notifyaction="notifObj.notifyaction"
+				notifyreadstatus="notifObj.notificationStatus"
+				notifyposttitle="notifObj.postName" 
+				notifypostid="notifObj.postId"
+				notifyid="notifObj.id"
+				notifytime="notifObj.notifiedTime"
+				notifyaccessurl="notifObj.notifyaccessurl"
+				notifybyppl="notifObj.byPeople"
+				notifyidgrp="notifObj.idgrp"
+				>
+			</notification-show-more-item>
+		</div>
+		<div class="row"><br></div>
+		<div class="row"><br></div>
+	</div>
+	<div class="col-lg-2 col-md-2 col-sm-2"></div>
+</div>

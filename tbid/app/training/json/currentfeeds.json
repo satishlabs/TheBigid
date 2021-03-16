@@ -1,0 +1,68 @@
+{
+	"feedlocations": [
+	    {
+			"postId": "3",
+			"title": "The City of London",
+			"postedBy": "Chandan",
+			"location": "City of London, London, United Kingdom",
+			"coordinates": [-0.09098519999997734, 51.5123443]
+		},
+		{
+			"postId": "5",
+			"title": "Design Thinking Event in Bangalore",
+			"postedBy": "Chandan",
+			"location": "Bangalore, Karnataka, India",
+			"coordinates": [77.59456269999998,12.9715987]
+		},
+		{
+			"postId": "6",
+			"title": "Lets go for a long drive!",
+			"postedBy": "Koushik",
+			"locationArea": "Mumbai, Maharashtra, India",
+			"coordinates": [ 72.87765590000004,19.0759837 ]
+		},
+		{
+			"postId": "8",
+			"title": "If Hard Work is the Key to Success, then why is a laborer not Successful?",
+			"postedBy": "Mathew",
+			"location": "Whitehouse, TX, United States",
+			"coordinates": [-95.22550409999997,32.2268212]
+		},
+		{
+			"postId": "10",
+			"title": "http://www.ipltickets.net/",
+			"postedBy": "Anonymous",
+			"location": "Dharamsala, Himachal Pradesh, India",
+			"coordinates": [76.32340369999997,32.21904200000001]
+		},		
+		{
+			"postId": "12",
+			"title": "Just for Laughs",
+			"postedBy": "Andrew",
+			"location": "Montreal, QC, Canada",
+			"coordinates": [-73.56725599999999,45.5016889]
+		},		
+		{
+			"postId": "14",
+			"title": "Fan of Virat Kohli",
+			"postedBy": "Ronith",
+			"location": "New Delhi, Delhi, India",
+			"coordinates": [77.20902120000005,28.6139391]
+		},
+		{
+			"postId": "16",
+			"title": "Stone Pelting on Indian Soldiers",
+			"postedBy": "Chandan",
+			"location": "LOC View Point Road, Kargil, India",
+			"coordinates": [76.12394859999995,34.595919]
+		},
+		{
+			"postId": "18",
+			"title": "Ragging",
+			"postedBy": "Steve",
+			"location": "Kolkata, West Bengal, India",
+			"coordinates": [88.36389499999996,22.572646]
+		}		
+		
+	]
+}

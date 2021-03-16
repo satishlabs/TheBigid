@@ -1,0 +1,182 @@
+{
+	"notificationDetails": [{
+			"id": 5,
+			"title": "Design Thinking Event in Bangalore",
+			"body": "Understanding the fundamentals of Design Thinking. Clearing myths about design thinking. Interactive Sessions. Case Studies and Activity based learning.Practical insights and Mini Project. Interested people can attend the event at Big Brewsky, Bangalore(6:30pm)",
+			"tags": ["Technology", "Question", "Knowledge"],
+			"postType": "EVENT",
+			"postCategory": "SMALL",
+			"postUserInputCategory": "",
+			"postCreatedTime": "Wed May 5 2017 14:26:00 GMT+0530 (India Standard Time)",
+			"locationArea": "Bangalore, Karnataka, India",				
+			"longitude": 77.59456269999998,
+			"latitude": 12.9715987,
+			"imgPath": "designthinking.png",
+			"toField": "Wissen Employees",
+			"fromField": "Wissen HR Team",
+			"username": "Chandan",
+			"userId": "user_Chandan123",			
+			"anonymous": true,
+			"nswf": null,
+			"expand": false,
+			"enableNotificationFromUser": true,
+			"eventDate":"1500364935814",
+			"eventDescription":"Event Description",
+			"caption":"",
+			"postQuestion":"",
+			"postThought":"",
+			"postLink":"",
+		    "postDescription":"",	
+			"savedPost":false,			    		
+			"voteDetails": {
+				"voteCount": 3,
+				"upVote": false,				
+				"downVote": true,
+				"upVotedTimeByMe": "",
+				"downVotedTimeByMe": "",		
+				"pushActivatedTimeByMe" : "",	
+				"pushCount": 0,									
+				"pushActivate": false,
+				"pushActivated": false,
+				"reportedNSFW": true,
+				"reportedIsNSFW": false,				
+				"reportedNSFWReason": ""
+			},
+			"comments": [{
+					"commentId": "P2C1",
+					"commentPostedBy": "CommentUser1b",
+					"commentContent": "comment1 -  User1b - 2nd Post",
+					"upVote": false,
+					"downVote": false,						
+					"voteCount": 4,
+					"commentPostedTime": "",
+					"replies": [{
+						"replyId": "P2C1R1",
+						"replyCommentBy": "Replier1ForCommentUser1b",
+						"replyCommentContent": "reply1 - comment1 -  User1b - 2nd Post",
+						"voteCount": 1,
+						"replyCommentTime": "",
+						"upVote": false
+					}]
+
+				},
+				{
+					"commentId": "P2C2",
+					"commentPostedBy": "CommentUser2b",
+					"commentContent": "comment2 -  User2b - 2nd Post",
+					"upVote": false,
+					"downVote": false,						
+					"voteCount": 3,
+					"commentPostedTime": "",
+					"replies": [{
+							"replyId": "P2C2R1",
+							"replyCommentBy": "Replier1ForCommentUser2b",
+							"replyCommentContent": "reply1 - comment2 -  User2b - 2nd Post",
+							"voteCount": 1,
+							"replyCommentTime": "",
+							"upVote": false
+						},
+						{
+							"replyId": "P2C2R2",
+							"replyCommentBy": "Replier2ForCommentUser2b",
+							"replyCommentContent": "reply2 - comment2 -  User2b - 2nd Post",
+							"voteCount": 4,
+							"replyCommentTime": "",
+							"upVote": false
+						}
+					]
+				},
+				{
+					"commentId": "P2C3",
+					"commentPostedBy": "CommentUser3b",
+					"commentContent": "comment3 -  User3b - 2nd Post",
+					"upVote": false,
+					"downVote": false,						
+					"voteCount": 4,
+					"commentPostedTime": "",
+					"replies": [{
+							"replyId": "P2C3R1",
+							"replyCommentBy": "Replier1ForCommentUser3b",
+							"replyCommentContent": "reply1 - comment3 -  User3b - 2nd Post",
+							"voteCount": 1,
+							"replyCommentTime": "",
+							"upVote": false
+						},
+						{
+							"replyId": "P2C3R2",
+							"replyCommentBy": "Replier2ForCommentUser3b",
+							"replyCommentContent": "reply2 - comment3 -  User3b - 2nd Post",
+							"voteCount": 4,
+							"replyCommentTime": "",
+							"upVote": false
+						},
+						{
+							"replyId": "P2C3R3",
+							"replyCommentBy": "Replier3ForCommentUser3b",
+							"replyCommentContent": "reply3 - comment3 -  User3b - 2nd Post",
+							"voteCount": 6,
+							"replyCommentTime": "",
+							"upVote": false
+						},
+						{
+							"replyId": "P2C3R4",
+							"replyCommentBy": "Replier4ForCommentUser3b",
+							"replyCommentContent": "reply4 - comment3 -  User3b - 2nd Post",
+							"voteCount": 8,
+							"replyCommentTime": "",
+							"upVote": false
+						},
+						{
+							"replyId": "P2C3R5",
+							"replyCommentBy": "Replier5ForCommentUser3b",
+							"replyCommentContent": "reply5 - comment3 -  User3b - 2nd Post",
+							"voteCount": 2,
+							"replyCommentTime": "",
+							"upVote": false
+						},
+						{
+							"replyId": "P2C3R6",
+							"replyCommentBy": "Replier6ForCommentUser3b",
+							"replyCommentContent": "reply6 - comment3 -  User3b - 2nd Post",
+							"voteCount": 4,
+							"replyCommentTime": "",
+							"upVote": false
+						},
+						{
+							"replyId": "P2C3R7",
+							"replyCommentBy": "Replier7ForCommentUser3b",
+							"replyCommentContent": "reply7 - comment3 -  User3b - 2nd Post",
+							"voteCount": 4,
+							"replyCommentTime": "",
+							"upVote": false
+						},
+						{
+							"replyId": "P2C3R8",
+							"replyCommentBy": "Replier8ForCommentUser3b",
+							"replyCommentContent": "reply8 - comment3 -  User3b - 2nd Post",
+							"voteCount": 6,
+							"replyCommentTime": "",
+							"upVote": false
+						},
+						{
+							"replyId": "P2C3R9",
+							"replyCommentBy": "Replier9ForCommentUser3b",
+							"replyCommentContent": "reply9 - comment3 -  User3b - 2nd Post",
+							"voteCount": 8,
+							"replyCommentTime": "",
+							"upVote": false
+						},
+						{
+							"replyId": "P2C3R10",
+							"replyCommentBy": "Replier10ForCommentUser3b",
+							"replyCommentContent": "reply10 - comment3 -  User3b - 2nd Post",
+							"voteCount": 10,
+							"replyCommentTime": "",
+							"upVote": false
+						}
+					]
+				}
+			]
+
+		}]
+}

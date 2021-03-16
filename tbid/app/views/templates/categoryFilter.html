@@ -1,0 +1,10 @@
+<div class="col-sm-12" align="center">
+
+	<md-button type="checkbox" class="md-primary"
+		ng-repeat="category in categoryList"
+		ng-checked="checkSelected(category);"
+		ng-click="toggleSelection(category);"
+		ng-class="{'md-primary': checkSelected(category),'md-raised' : checkSelected(category)}">
+	{{category | capitalize}} </md-button>
+
+</div>

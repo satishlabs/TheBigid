@@ -1,0 +1,113 @@
+<div class="col-lg-4 col-lg-offset-4 box-shadow marginTop10 generalbgcolor">
+  <div class="alert alert-danger" role="alert" ng-show="rootData.error">
+    <!-- <span class="glyphicon glyphicon-remove" ></span> --> {{rootData.error}}
+  </div>
+
+  <div class="col-lg-12">
+    <tbid-input
+      ng-model = "data.username"
+      showtbidtextfield="yes"
+      check="check()"
+      placeholder="User Name"
+      resource-type="userName"
+      resource-name = "userName"
+      focus-me = "false"
+    ></tbid-input>
+  </div>
+  <div class="col-lg-12">
+    <tbid-input
+      ng-model = "data.password"
+      showtbidtextfield="yes"
+      check="check()"
+      placeholder="Password"
+      resource-type="password"
+      resource-name = "password"
+      is-passsword = "true"
+    ></tbid-input>
+  </div>
+  <div class="col-lg-12">
+    <tbid-input
+      ng-model = "data.passwordConfirm"
+      showtbidtextfield="yes"
+      check="check()"
+      placeholder="Confirm Password"
+      resource-type="compare"
+      resource-name = "compare"
+      is-passsword = "true"
+      compare-value="data.password"
+    ></tbid-input>
+  </div>
+  
+  <div class="col-lg-12"> 
+		<div class="tbid-input">
+				<label>Location</label> <br> 
+                <input id="draft-location" type="text" ng-model="locationkeyedbyUser" class="form-control" placeholder="Location" ng-focus="initializeGoogleLocations()">
+			    <div class="hidden" id="latitude" ng-model="userlatitude"></div>
+			    <div class="hidden" id="longitude" ng-model="userlongitude"></div> 
+		</div>
+  </div>
+
+  <div class="col-lg-12 marginTop10">
+    <div class="tbid-input">
+       <label for="dob">Birthday</label><br>
+      <p class="input-group">
+        <input
+          type="text" placeholder="Birthday"
+          class="form-control"
+          uib-datepicker-popup=""
+          ng-model="data.dob"
+          is-open="popup.opened"
+          datepicker-options="dateOptions"
+          popup-placement="top"
+          ng-required="true"
+          show-button-bar="false" />
+          
+        <span class="input-group-btn">
+          <button
+            class="btn btn-default"
+            ng-click="open($event);"><i class="glyphicon glyphicon-calendar"></i></button>
+        </span>
+        
+      </p>
+   </div>
+  </div> 
+  
+  <div class="col-lg-12">
+    <tbid-input
+      ng-model = "data.email"
+        showtbidtextfieldemail="yes"
+      check="check()"
+      placeholder="E-mail"
+      resource-type="email"
+      resource-name = "email"
+    ></tbid-input>
+  </div>
+  
+<br>
+
+<div ng-controller="UploadCtrl">
+       <form action="">       		
+         	<div class="col-lg-12 text-center">
+         		<img ng-if="data.profilePicture" ng-src="{{data.profilePicture}}" alt="" height="150" width="150" class="UploadCtrl">
+         	</div>
+       		 <div class="col-lg-12">
+  				<label ng-if="!data.profilePicture" for="files" class="btn btn-primary" style="margin-left:10px">Choose Avatar</label>
+  				<label ng-if="data.profilePicture" for="files" class="btn btn-primary" style="margin-left:10px">Change Avatar</label>
+  				<input  my-upload id="files" style="visibility:hidden;" type="file" name="upload">
+			</div>
+        </form>
+ </div>
+ 
+  <div class="row">
+    <div class="col-lg-12 text-center">
+    <button id="registerbtn" ng-disabled = "!submitEnabled" user-enter-key-press="callEnterFunc($event)" ng-click="doSubmit()" class="btn btn-create">Create an Account</button>
+    </div>
+  </div>
+  
+  <div class="text-center terms-conditions">
+  <hr>
+  <i>By signing up you agree to our <a class="terms-condition-text">Terms of Service</a> & <a class="terms-condition-text">Privacy Policy</a></i>
+  </div>
+  
+  <br>
+</div>

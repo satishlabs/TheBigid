@@ -1,0 +1,397 @@
+<div class="col-md-12 create-post-container box-shadow generalbgcolor">
+        <div class="row titlebar">
+
+            <div class="col-md-8">
+                <i class="glyphicon glyphicon-edit"></i>Create ID
+            </div>
+            <div class="col-md-2 type-descr" ng-hide="isIdType('General') || isEditingMeta"> 
+                <img ng-src="./images/defaultgeneral.png" class="expandedPostGeneralImage" ng-show="idType.name === 'General'"><span ng-show="idType.name === 'General'"> {{idType.name}}</span>
+                <i class="glyphicon" ng-class="idType.icon" ng-show="idType.name !== 'General'"></i><span ng-show="idType.name !== 'General'"> {{idType.name}}</span>
+            </div>
+            <div class="col-md-2 col-md-offset-7 type-descr" ng-hide="!(isIdType('General') || isEditingMeta)">
+                <i class="hidden" ng-class="idType.icon"></i>
+            </div>
+            <div class="col-md-9" ng-show="isIdType('General')"></div>
+            <div class="pos-absolute">
+                <i class="glyphicon glyphicon-remove fa-lg" ng-click="hideCreation();resetAllPreviousCreatePostFields();"></i>
+            </div>
+        </div>
+  <hr>
+
+        <div class="post-content" ng-show="isEditingContent">
+
+<!--------------------------------- CREATE POST - SCREEN 1  - GENERAL - START --------------------------------->
+            <div class="row-eq-height" ng-if="isIdType('GENERAL')">
+
+                <div class="col-md-8">
+                    <tbid-input ng-model="draft.title"
+                        placeholder="Header"
+                        showtbidtextfieldcreatepost="yes"
+                        resource-type="postTitleOrBody"
+                        resource-name="postTitleOrBody"
+                        is-required=false >
+                    </tbid-input>
+                   <!-- is-required="{{isIdType('GENERAL')}}" -->
+
+                        <tbid-input ng-model="draft.body"
+                        	placeholder="Body"
+                        	showtbidtextarea="yes"
+                        	showrows = "4"
+                        	resource-type="postTitleOrBody"
+                        	resource-name="postTitleOrBody"
+                        	is-required=false >
+                        </tbid-input>
+                         <div class="customized-error-message-general" ng-show="mandateCheckForGeneralPostFlag">Header or Body needs to be filled.</div>
+                </div>
+
+               <!--  <div class="col-md-4 postLabelImage"><i class="glyphicon glyphicon-picture"></i> Image</div> -->
+
+                <!-- - IMAGE UPLOAD FOR CREATE POST - START -->
+                <div class="col-md-4" ng-init="createPostGeneralPicture=''">
+       				<form action="">
+					<div class="image-upload-createPost">
+   							 <label for="file-input">
+        						 <i class="glyphicon glyphicon-picture"></i> Image
+   							 </label>
+   						 <input my-upload-post-general id="file-input" type="file" ng-model="createPostGeneralPicture" />
+				    </div>
+         				 </form>
+						<br>
+         			 <img ng-if="createPostGeneralPicture" ng-src="{{createPostGeneralPicture}}" alt="General Pic" height="50%" width="50%">
+				 </div>
+                 <!-- - IMAGE UPLOAD FOR CREATE POST - END -->
+
+            </div>
+<!--------------------------------- CREATE POST - SCREEN 1  - GENERAL - END   --------------------------------->
+
+<!--------------------------------- CREATE POST - SCREEN 1  - EVENT ID - START --------------------------------->
+            <div class="row row-eq-height" ng-if="isIdType('EVENT')">
+                <div class="col-md-8">
+                    <tbid-input
+                        ng-model="draft.title"
+                        placeholder="Header"
+                        showtbidtextfieldcreatepost="yes"
+                        resource-type="postTitleEvent"
+                        resource-name="postTitleEvent"
+                        is-required=false >
+                    </tbid-input>
+                    <!-- is-required="{{isIdType('EVENT')}}" -->
+                    <div class="">
+                        <tbid-input
+                        	ng-model="draft.body"
+                        	placeholder="Description"
+                        	showtbidtextarea="yes"
+                        	showrows = "6"
+                        	resource-type="draftDescriptionEvent"
+                        	resource-name="draftDescriptionEvent"
+                        	is-required=false>
+                        </tbid-input>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                 <label>When</label>
+     						 <p class="input-group">
+       							 <input  type="text" placeholder="When" ng-change="checkWhen()"   class="form-control"
+         						  	 uib-datepicker-popup="" ng-model="draft.when" is-open="popup.opened"  datepicker-options="dateOptions"
+         							 popup-placement="top" ng-required="true" show-button-bar="false" />
+
+        							<span class="input-group-btn">
+          								<button class="btn btn-default" ng-click="open($event);"><i class="glyphicon glyphicon-calendar"></i></button>
+        							</span>
+
+      						</p>
+      					<div class="customized-error-message" ng-show="whenNotSet">Set When</div>
+
+      					<!-- <div class="postLabelEventImage"><i class="glyphicon glyphicon-picture"></i> Image</div> -->
+
+                <!-- - IMAGE UPLOAD FOR CREATE POST - START -->
+                <div ng-init="createPostEventPicture=''">
+       				<form action="">
+					<div class="image-upload-createPost">
+   							 <label for="file-input">
+        						 <i class="glyphicon glyphicon-picture"></i> Image
+   							 </label>
+   						 <input my-upload-post-event id="file-input" type="file"/>
+				    </div>
+         				 </form>
+						<br>
+         			 <img ng-if="createPostEventPicture" ng-src="{{createPostEventPicture}}" alt="Event Pic" height="50%" width="50%">
+				 </div>
+                 <!-- - IMAGE UPLOAD FOR CREATE POST - END -->
+
+   					</div>
+
+
+            </div>
+<!--------------------------------- CREATE POST - SCREEN 1  - EVENT ID - END   --------------------------------->
+
+<!--------------------------------- CREATE POST - SCREEN 1  - VISUAL ID - START --------------------------------->
+			<div class="row" ng-if="isIdType('VISUAL')">
+                   <div class="col-md-10">
+                    	 <tbid-input ng-model="draft.title"
+                        		placeholder="Header"
+                        		showtbidtextfieldtitle="yes"
+                        		resource-type="postTitleVisual"
+                        		resource-name="postTitleVisual"
+                        		is-required=false >
+                         </tbid-input>
+                        		<!-- is-required="{{isIdType('VISUAL')}}"  -->
+                   </div>
+			</div>
+            <div class="row row-eq-height marginBottom10" ng-if="isIdType('VISUAL')">
+                 <div class="col-md-7">
+                     <div class="image-drop">
+                        Drop Image Here
+                    </div>
+                    <div class="customized-error-message-drag-image-upload" ng-show="whenImageNotSet">Drag & Drop an Image here</div>
+                    <div ng-controller="imageFileUploadController" class="image-dragupload-createPost">
+                       <div class="imgDragUploadOptions">
+                 		<input type="file" fileread="uploadme.src" value="Drop here">
+                 		<input type="file" fileread="uploadme.src" value="Drop here">
+						<input type="file" fileread="uploadme.src" value="Drop here">
+                 		</div>
+
+                 		 <img ng-show="uploadme.src" class="imageDragUploadSection" ng-src="{{ uploadme.src }}">
+   					 </div>
+                </div>
+                <div>
+
+                </div>
+                <div class="col-md-5">
+                    <div class="">
+                        <tbid-input ng-model="draft.body"
+                        	placeholder="Caption"
+                        	showtbidtextarea="yes"
+                        	showrows = "6"
+                        	resource-type="VisualCaption"
+                        	resource-name="VisualCaption"
+                        	is-required=false>
+                        </tbid-input>
+                    </div>
+                </div>
+            </div>
+<!--------------------------------- CREATE POST - SCREEN 1  - VISUAL ID - END --------------------------------->
+
+<!--------------------------------- CREATE POST - SCREEN 1  - QUESTION ID - START --------------------------------->
+            <div class="row row-eq-height" ng-if="isIdType('QUESTION')">
+                <div class="col-md-8">
+                    <tbid-input
+                    	ng-model="draft.title"
+                        placeholder="Question"
+                        showtbidtextfieldcreatepost="yes"
+                        resource-type="question"
+                        resource-name="question"
+                        is-required="{{isIdType('QUESTION')}}">
+                    </tbid-input>
+                    <!--  is-required="{{isIdType('QUESTION')}}" -->
+                    <div class="">
+                        <tbid-input
+                        	ng-model="draft.body"
+                        	placeholder="Thoughts"
+                        	showtbidtextarea="yes"
+                        	showrows = "4"
+                        	resource-type="questionDraftThoughts"
+                        	resource-name="questionDraftThoughts"
+                        	is-required=false>
+                        </tbid-input>
+                    </div>
+
+                </div>
+                <!--<div class="col-md-4 postLabelImage"><i class="glyphicon glyphicon-picture"></i> Image</div>  -->
+
+               <!-- - IMAGE UPLOAD FOR CREATE POST - START -->
+                <div ng-init="createPostQuestionPicture=''" class="col-md-4">
+       				<form action="">
+					<div class="image-upload-createPost">
+   							 <label for="file-input">
+        						 <i class="glyphicon glyphicon-picture"></i> Image
+   							 </label>
+   						 <input my-upload-post-question id="file-input" type="file"/>
+				    </div>
+         				 </form>
+						<br>
+         			 <img ng-if="createPostQuestionPicture" ng-src="{{createPostQuestionPicture}}" alt="Question pic" height="50%" width="50%">
+				 </div>
+                 <!-- - IMAGE UPLOAD FOR CREATE POST - END -->
+
+            </div>
+<!--------------------------------- CREATE POST - SCREEN 1  - QUESTION ID - END --------------------------------->
+
+<!--------------------------------- CREATE POST - SCREEN 1  - LINK ID - START --------------------------------->
+            <div class="row row-eq-height" ng-if="isIdType('LINK')">
+                <div class="col-md-8">
+                    <tbid-input ng-model="draft.title"
+                        placeholder="Link"
+                        showtbidtextfieldcreatepost="yes"
+                        resource-type="link"
+                        resource-name="link"
+                        is-required="{{isIdType('LINK')}}"></tbid-input>
+
+                    <div class="">
+                        <tbid-input ng-model="draft.body"
+                        placeholder="Description"
+                        showtbidtextarea="yes"
+                        showrows = "4"
+                        resource-type="linkDescription"
+                        resource-name="linkDescription" is-required=false></tbid-input>
+                    </div>
+
+                </div>
+            </div>
+<!--------------------------------- CREATE POST - SCREEN 1  - LINK ID - END --------------------------------->
+   <!-- To From part - START -->
+            <div class="row marginTop20">
+                <div class="col-md-10" ng-if="draft.isToFrom">
+                    <div class="form-group">
+                          <div class="col-md-5">
+                    			<tbid-input
+                    				ng-model="draft.to"
+                    				placeholder="To"
+                    				showtbidtextfieldtofrom="yes"
+                    				resource-type="createPostto"
+                    		     	resource-name="createPostto"
+                    		     	is-required=false>
+                    		    </tbid-input>
+                    		     <div class="customized-error-message-general" ng-show="errorPostToFrom">Mention To or From</div>
+                          </div>
+
+                       	  <div class="col-md-5">
+                                <tbid-input
+                                	ng-model="draft.from"
+                                	placeholder="From"
+                                	showtbidtextfieldtofrom="yes"
+                                	resource-type="createPostfrom"
+                    		     	resource-name="createPostfrom"
+                    		     	is-required=false>
+                    		    </tbid-input>
+                          </div>
+                    </div>
+                </div>
+   <!-- To From part - END -->
+<!---------------------------------  CREATE POST - SCREEN 1  -  DONE BUTTON - START  --------------------------------->
+                <div class="col-md-12">
+                    <div class="text-right marginTop10 createPostDoneButton">
+                        <button ng-if="isIdType('GENERAL')" class="btn btn-create" user-enter-key-press="callEnterFunc($event)" ng-click="checkMandateFields('GENERAL');">Next<i class="glyphicon glyphicon-menu-right"></i></button>
+                        <button ng-if="isIdType('EVENT')" class="btn btn-create" user-enter-key-press="callEnterFunc($event)" ng-click="checkMandateFields('EVENT');">Next<i class="glyphicon glyphicon-menu-right"></i></button>
+                        <button ng-if="isIdType('VISUAL')" class="btn btn-create" user-enter-key-press="callEnterFunc($event)" ng-click="checkMandateFields('VISUAL');">Next<i class="glyphicon glyphicon-menu-right"></i></button>
+                        <button ng-if="isIdType('QUESTION')" class="btn btn-create" user-enter-key-press="callEnterFunc($event)" ng-click="checkMandateFields('QUESTION');">Next<i class="glyphicon glyphicon-menu-right"></i></button>
+                        <button ng-if="isIdType('LINK')" class="btn btn-create" user-enter-key-press="callEnterFunc($event)" ng-click="checkMandateFields('LINK');">Next<i class="glyphicon glyphicon-menu-right"></i></button>
+                    </div>
+                </div>
+<!---------------------------------  CREATE POST - SCREEN 1  -  DONE BUTTON - END  --------------------------------->
+            </div>
+
+        </div>
+
+
+
+
+
+<!---------------------------------  CREATE POST -  SCREEN 2  -  START  --------------------------------->
+        <div class="post-meta" ng-show="isEditingMeta">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="form-group">
+                        <form class="form-horizontal">
+                            <div class="form-group">
+                                <label class="col-md-4 control-label">Select Category</label>
+                                <div class="col-md-3">
+                                    <select  class="form-control" ng-model="draft.category" ng-init="draft.category=categoryListPostLabel[0];draft.categoryUserInput=''" >
+                                        <option value="{{category}}" ng-repeat="category in categoryListPostLabel">
+                                        {{category | capitalize}}
+                                        </option>
+                                    </select>
+
+                                    	<span ng-show="draft.category=='____'"><br>
+                                    	   <input class="form-control" ng-show="draft.category=='____'" type="text" maxlength="31" ng-model="draft.categoryUserInput" placeholder="type your category"/>
+                       						 <div class="customized-error-message" ng-show="error">{{errorMessage}}</div>
+                                    	</span>
+                                    	<div class="customized-error-message" ng-show="error">{{errorDropdownMessage}}</div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-md-4 control-label">Type</label>
+                                <div class="col-md-3 post-type text-left">
+                                  <span class="" aria-hidden="true" ng-show="idType.name==='General'">
+									<img ng-src="./images/defaultgeneral.png" class="expandedPostGeneralImage">
+						          </span>
+                                    <i class="glyphicon" ng-class="idType.icon" ng-hide="idType.name==='General'"></i> {{idType.name}}
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-md-4 control-label">Add Tags</label>
+                                 <div class="col-md-6">
+                                    <input type="text" ng-model="draft.label" class="form-control" placeholder="Add tags, separated by commas">
+                                </div>
+                            </div>
+                            <div class="form-group" >
+                                <label class="col-md-4 control-label">Location</label>
+                                <div class="col-md-6" >
+                                    <input id="draft-location" type="text" ng-model="draft.location" class="form-control" placeholder="Location">
+									<div class="hidden" id="latitude" ng-model="draft.latitude"></div>
+									<div class="hidden" id="longitude" ng-model="draft.longitude"></div>
+                                </div>
+                            </div>
+                          <div class="form-group" ng-if="draft.isToFrom">
+                            <label class="col-md-4 control-label">To</label>
+                            <div class="col-md-6" >
+                              <input type="text" ng-model="draft.to" class="form-control" placeholder="To">
+                              <div ng-hide="error"></div>
+                            </div>
+                          </div>
+                          <div class="form-group" ng-if="draft.isToFrom">
+                            <label class="col-md-4 control-label">From</label>
+                            <div class="col-md-6" >
+                              <input type="text" ng-model="draft.from" class="form-control" placeholder="From">
+                             <div ng-hide="error"></div>
+                            </div>
+                          </div>
+
+                          <div class="col-md-8 col-md-offset-4 text-left" ng-if="isEditingMeta">
+                            <button class="btn btn-create" user-enter-key-press="callEnterFunc($event)" ng-click="goBackToEditingContent()">Back</button>
+                            <button class="btn btn-create" user-enter-key-press="callEnterFunc($event)" ng-click="checkMandatePostlabelScreen();">Post</button>
+                          </div>
+
+
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+     <hr>
+
+        <div class="row">
+            <div class="col-md-7">
+                <div class="row row-eq-height">
+
+                   <div class="col-md-12 no-padding" ng-if="isEditingContent">
+                        <ul class="types-list no-padding">
+                            <div class="col-md-3" ng-repeat="type in allTypes" ng-if="!isIdType(type.type)">
+                                <li>
+                                  <a ng-show="type.name === 'General'" class="icon-label" ng-click="clearOptions();resetAllPreviousCreatePostFields();updateIdType(type)">
+                                    <img ng-src="./images/defaultgeneral.png" class="minimizedPostGeneralImage"> <span>{{type.name}}</span>
+                                  </a>
+                                  <a ng-show="type.name !== 'General'" class="icon-label" ng-click="clearOptions();resetAllPreviousCreatePostFields();updateIdType(type)">
+                                    <i class="glyphicon custom-glyphicon" ng-class="type.icon"></i> <span>{{type.name}} </span>
+                                  </a>
+                               </li>
+                            </div>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-5 label-list-container left-bordered">
+                <ul class="label-list no-padding">
+                    <li><a ng-click="toggleNsfw()" ng-class="{enabled: draft.isNsfw}"><i class="glyphicon glyphicon-stop"></i> NSFW</a></li>
+                    <li><a ng-click="toggleToFrom()" ng-class="{enabled: draft.isToFrom}"><i class="glyphicon glyphicon-comment"></i> To/From</a></li>
+                    <li><a ng-click="toggleAnon()" ng-class="{enabled: draft.isAnon}"><i class="glyphicon glyphicon-sunglasses"></i> Anonymous</a></li>
+                </ul>
+            </div>
+        </div>
+<!---------------------------------  CREATE POST -  SCREEN 2  -  END  --------------------------------->
+</div>
+

@@ -1,0 +1,65 @@
+<div class="row" ng-if="rootData.isLoggedIn">
+
+	<div class="col-sm-2">
+		<div class="row">
+			<div class="profile-image">
+				<img ng-src="{{userData.profileImagePath}}">
+			</div>
+		</div>
+		<div class="row">
+			<h4>{{userData.loggedInUserName}}</h4>
+		</div>
+	</div>
+	<div class="col-sm-1"></div>
+	<div class="col-sm-9">
+	
+	
+		<div class="row">
+			<h4>Your ID(s) :</h4>
+		</div>
+		<div class="row">
+			<userprofile-post
+				ng-repeat="post in profileCompletedata.posts | filter : showPostsBasedOnUserLoggedIn  | orderBy : customSort('Recent') : true as filtered_user_posts"
+				data="post" 
+				fulldata="data"
+				userdata = "userData"
+				showreplies="showreplies"
+				showrepliesfunc="showrepliesfunc(replyObj)" title-char-count="50"
+				body-char-count="100" show-type-icon="true"
+				expand="toggleExpansion(post.id)"
+				expanded-post-id="{{expandedPost}}"> 
+			</userprofile-post>
+			
+				<div ng-show="filtered_user_posts.length === 0 && rootData.isLoggedIn">
+					<h5>There are no id's by you! We encourage you to create one.</h5>
+				</div>			
+		</div> 
+		
+		<br><br>
+		<div class="row">
+			<h4>You commented on ID(s) :</h4>
+		</div>
+		<div class="row">
+			<userprofile-post-comment
+				ng-repeat="post in profileCompletedata.posts | filter : showPostsBasedOnComments  | orderBy : customSort('Recent') : true as filtered_user_postscomment"
+				data="post" 
+				fulldata="data"
+				userdata = "userData" 
+				showreplies="showreplies"
+				showrepliesfunc="showrepliesfunc(replyObj)" 
+				title-char-count="50"
+				body-char-count="100" 
+				show-type-icon="true"
+				expand="toggleExpansion(post.id)"
+				expanded-post-id="{{expandedPost}}">
+		    </userprofile-post-comment>
+		    
+				<div ng-show="filtered_user_postscomment.length === 0 && rootData.isLoggedIn">
+					<h5>You have not commented on any ID(s)</h5>
+				</div>			    
+		</div>		
+		
+		
+	</div>
+	<div class="col-sm-2"></div>
+</div>

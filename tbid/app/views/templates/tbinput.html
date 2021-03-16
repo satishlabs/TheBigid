@@ -1,0 +1,55 @@
+<div ng-show="showtbidtextfield" class="{{errorClass}} tbid-input">
+	<label>{{placeholder}}</label> <br> <input class="form-control"
+		type="{{inputType}}" placeholder="{{placeholder}}" maxlength="31"
+		ng-blur="blurHandler()" ng-change="change()" ng-model="value">
+	<div class="error-message" ng-show="error">{{errorMessage}}</div>
+	<div ng-hide="error"></div>
+</div>
+
+<div ng-show="showtbidtextfieldtitle" class="{{errorClass}} tbid-input">
+	<label>{{placeholder}}</label> <br> <input class="form-control"
+		type="{{inputType}}" placeholder="{{placeholder}}"
+		ng-blur="blurHandler()" ng-change="change()" ng-model="value">
+	<div class="error-message" ng-show="error">{{errorMessage}}</div>
+	<div ng-hide="error"></div>
+</div>
+
+<div ng-show="showtbidtextfieldemail" class="{{errorClass}} tbid-input">
+	<label>{{placeholder}}</label> <br> <input class="form-control"
+		type="{{inputType}}" placeholder="{{placeholder}}" maxlength="60"
+		ng-blur="blurHandler()" ng-change="change()" ng-model="value">
+	<div class="error-message" ng-show="error">{{errorMessage}}</div>
+	<div ng-hide="error"></div>
+</div>
+
+<div ng-show="showtbidtextfieldcreatepost" class="{{errorClass}} tbid-input">
+	<label>{{placeholder}}</label> <br> <input class="form-control"
+		type="{{inputType}}" placeholder="{{placeholder}}"
+	ng-change="changeCreatePost();"  ng-model="value">
+	<div class="error-message" ng-show="error">{{errorMessage}}</div>
+	<div ng-hide="error"></div>
+</div>
+
+<div ng-show="showtbidtextfieldcategory" class="{{errorClass}} tbid-input">
+	<input class="form-control" maxlength="31"
+		type="{{inputType}}" placeholder="{{placeholder}}"
+	ng-change="changeCreatePost();"  ng-model="value">
+	<!-- <div class="error-message" ng-show="error">{{errorMessage}}</div>
+	<div ng-hide="error"></div> -->
+</div>
+
+<div ng-show="showtbidtextarea" class="{{errorClass}} tbid-input">
+	<label>{{placeholder}}</label> <br>
+<textarea rows="{{showrows}}" ng-model="value"  ng-change="changeCreatePost();"  class="form-control" placeholder="{{placeholder}}" maxlength="3000">
+</textarea>
+<p class="remainingChars">{{3000 - value.length}} characters remaining</p>
+	<div class="error-message" ng-show="error">{{errorMessage}}</div>
+	<div ng-hide="error"></div>
+</div>
+
+<div ng-show="showtbidtextfieldtofrom" class="{{errorClass}} tbid-input">
+	<label>{{placeholder}}</label> <br> 
+	<input class="form-control"	type="{{inputType}}" maxlength="35" placeholder="{{placeholder}}"	ng-change="changeCreatePost();"  ng-model="value">
+	<div class="error-message" ng-show="error">{{errorMessage}}</div>
+	<div ng-hide="error"></div>
+</div>

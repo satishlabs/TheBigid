@@ -1,0 +1,294 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+    <link rel="icon" href="favicon.ico" type="image/x-icon"/>
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+    <!-- build:css(.) styles/vendor.css -->
+    <!-- bower:css -->
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
+    <link rel="stylesheet" href="bower_components/angular-material/angular-material.css" />
+    <!-- endbower -->
+    <!-- endbuild -->
+    <!-- build:css(.tmp) styles/main.css -->
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/search-button.css">
+    <!--<link rel="stylesheet" href="styles/custom-style.css">-->
+    <!-- endbuild -->
+  </head>
+  <body ng-app="tbidApp" ng-controller="GlobalCtrl">
+    <!--[if lte IE 8]>
+      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+
+    <!-- Add your site or application content here -->
+    <div ng-show="rootData.showLoader" class="loader-container">
+      <div id="floatingBarsG">
+      	<div class="blockG" id="rotateG_01"></div>
+      	<div class="blockG" id="rotateG_02"></div>
+      	<div class="blockG" id="rotateG_03"></div>
+      	<div class="blockG" id="rotateG_04"></div>
+      	<div class="blockG" id="rotateG_05"></div>
+      	<div class="blockG" id="rotateG_06"></div>
+      	<div class="blockG" id="rotateG_07"></div>
+      	<div class="blockG" id="rotateG_08"></div>
+      </div>
+      <div class="background-cover"></div>
+    </div>
+    
+    
+    
+    <!-- <div class="navbar navbar-default tbid-nav" > -->
+    <div class="navbar navbar-default tbid-nav" >
+        <div class="">
+        
+		    <div class="row" style="margin:auto">
+			    <div class="col-lg-1 col-md-1 col-sm-1"></div>
+			    <div class="col-lg-10 col-md-10 col-sm-10">
+			    
+					     <div class="row">
+					    	<div class="col-lg-12 col-md-12 col-sm-12">
+								<div class="row">
+								      <div class="col-lg-3 col-md-3 col-sm-3">
+							            <a ng-click="reloadPage()" class="cursorpointer">
+							              <img class="logo-img" src="images/logo.png">
+							            </a>
+							           </div> 
+							        
+										<!-- SEARCH BOX on top of the WALL - START -->
+										<div class="col-lg-3 col-md-3 col-sm-3 marginTop10 customAlignSearchBar">
+											 <div ng-show="rootData.isLoggedIn && showSearchBoxFlag">
+											       <div class="form-group">
+											         <div class="icon-addon addon-md" ng-init="showSearchPostsTypes=false;">
+											           <input type="text" ng-model="searchQuery" ng-model-options="{ debounce: 500 }" placeholder="Search id(ea)s.." class="form-control" id="search" ng-keypress="checkEnterPressed($event,showSearchPostsTypes);">
+											           <label ng-hide="showSearchPostsTypes" for="search" class="glyphicon glyphicon-search" rel="tooltip" title="Search id(ea)s.." ng-click="showSearchPostsTypes=true;clearFlagsOnPageLoad();switchOnTypesCategories();"></label>
+													   <label ng-show="showSearchPostsTypes" for="search" class="glyphicon glyphicon-zoom-out" rel="tooltip" title="Search id(ea)s.." ng-click="showSearchPostsTypes=false;searchQuery='';showMessageNotFoundFlag=false;clearFlagsOnPageLoad();"></label>           
+											         </div>
+											       </div>
+											</div>
+										</div>
+										<!-- SEARCH BOX on top of the WALL - END -->
+										<div class="col-lg-6 col-md-3 col-sm-3">
+								            <div class="align-right link-container" ng-if="!rootData.isLoggedIn">
+								              <a ng-show="rootData.showRegister" ng-href="#/register" class="btn btn-login">SignUp</a>
+								              <div ng-show="rootData.showRegister && rootData.showLogin" class="divider-vertical"></div>
+								              <a ng-show="rootData.showLogin" ng-href="#/login" class="btn btn-login">Login</a>
+								            </div>
+							           </div>
+							            <div class="col-lg-6 col-md-3 col-sm-3 pull-right">
+							            <div class="align-right login-container" ng-if="rootData.isLoggedIn">
+							              <div class="profile-image" ng-init="getProfileInformation();">
+							             
+							          		<!--  <img ng-show="showTopProfileInfo" ng-click="clearFlagsOnPageLoad();callProfileInfoCall()" ng-src="{{userData.profileImagePath}}" alt="{{userData.loggedInUserName}} propic"> --> 
+							          	     <img ng-show="showTopProfileInfo" ng-click="clearFlagsOnPageLoad();" ng-src="{{userData.profileImagePath}}" alt="{{userData.loggedInUserName}} propic">
+							                 <a ng-show="showTopProfileInfo" ng-click="reloadPage();clearFlagsOnPageLoad();" class="no-text-decoration">{{userData.loggedInUserName}}</a> 
+							                 
+							          		 <img ng-hide="showTopProfileInfo" ng-click="" ng-src=""> 
+							    			 <a ng-hide="showTopProfileInfo" ng-click=""></a>
+							                 							                 
+			  									<div class="divider-vertical"></div>
+			  											  									  
+												 <div class="dropdown" ng-if="rootData.isLoggedIn">
+												    <a class="glyphicon glyphicon-cog settingsStyle cursorpointer" type="button" data-toggle="dropdown"></a>
+												    <ul class="dropdown-menu" 
+												    	style="margin-top:17px;margin-left:-8px;box-shadow: 0 5px 15px 0 rgba(14, 29, 64, 0.85);border-radius:0px;">
+												      <li><a ng-href="" ng-click="callChangePassword('/changePassword');">Change Password</a></li>
+												      <li class="divider"></li>
+												      <li><a ng-href="" ng-click="callChangeAvatar('/changeAvatar');">Change Avatar</a></li>
+												    </ul>
+												  </div>
+			  									<!-- Settings Icon - END -->
+			  									
+			  									<div class="divider-vertical"></div>
+			  									
+												   <!-- Notification Section - START -->
+													<div class="dropdown pull-right" ng-if="rootData.isLoggedIn">
+														 <span class="notificationsCount pull-right"><b ng-class="{'custom-badge': notificationCount > 0,'custom-badge opacityInVisible' : notificationCount === 0}">{{notificationCount}}</b></span>
+													 	 
+														<button class="notificationDropButtonGlobal" data-toggle="tooltip" data-placement="bottom" title="{{notificationCount}} new notifications" ng-click="updateNotificationCountRead();showNotificationList()"></button>
+														<!-- <button class="notificationDropButtonGlobal" ng-if="notificationCount > 0" ></button> -->
+														
+													<div id="myDropdown" class="dropdown-content-global notificationIconScroll" ng-show="notificationDisplayObj.length > 0">
+													
+															<div class="notificationheader">Notifications</div>
+															<notification-item id="{{$index}}"
+																ng-repeat="notifObj in notificationDisplayObj | orderBy : sortByRecentTime : true | limitTo : 6"
+																notifbyuser="notifObj.byUserName" 
+																notifbyuserid="notifObj.byUserId"
+																notifyaction="notifObj.notifyaction"
+																notifyreadstatus="notifObj.notificationStatus"
+																notifyposttitle="notifObj.postName"
+																notifypostid="notifObj.postId"
+																notifyid="notifObj.id"
+																notifytime="notifObj.notifiedTime"
+																notifyaccessurl="notifObj.notifyaccessurl"
+																notifybyppl="notifObj.byPeople"
+																notifyidgrp="notifObj.idgrp"
+																>
+															</notification-item>
+															<div class="showmore" ng-show="notificationDisplayObj.length > 6" ng-click="showMoreNotifications()">Show More</div>
+														</div>
+														
+													</div>
+													<!-- Notification Section - END -->		
+
+ 	
+	
+							                 
+							                  <div class="divider-vertical"></div>
+							                  <div class="divider-vertical"></div>
+			      								
+			      							
+							                <a href="" class="btn btn-login" ng-click="logout()">logout</a>
+							              </div>
+							            </div>
+							            </div>
+						          </div>			    	
+					    	</div>
+					     </div>
+			    
+			    
+			          			    
+			    </div>
+			    <div class="col-lg-1 col-md-1 col-sm-1">
+			    </div>
+		    </div>        
+      </div>
+    </div>
+    
+ 
+
+    <div>
+	    <div class="col-sm-1"></div>
+	    <div class="col-sm-10">
+        <div ng-view=""></div>
+      </div>
+	    <div class="col-sm-1"></div>
+
+    </div>
+
+
+
+
+
+<!--    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDnTW7elSVQJ8GXxjIuDlbmUGzGWqJqmvc&v=3.exp&libraries=places"></script> -->
+   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB980f7lPB9Cek3g68AoFsjq6g5fHwsdsg&v=3.exp&libraries=places"></script>
+    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
+     <script>
+       !function(A,n,g,u,l,a,r){A.GoogleAnalyticsObject=l,A[l]=A[l]||function(){
+       (A[l].q=A[l].q||[]).push(arguments)},A[l].l=+new Date,a=n.createElement(g),
+       r=n.getElementsByTagName(g)[0],a.src=u,r.parentNode.insertBefore(a,r)
+       }(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+       ga('create', 'UA-XXXXX-X');
+       ga('send', 'pageview');
+    </script>
+		
+	    <!-- build:js(.) scripts/vendor.js -->
+	    <!-- bower:js -->
+	    <script src="bower_components/jquery/dist/jquery.js"></script>
+	    <script src="bower_components/angular/angular.js"></script>
+	    <script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+	    <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+	    <script src="bower_components/angular-animate/angular-animate.js"></script>
+	    <script src="bower_components/angular-cookies/angular-cookies.js"></script>
+	    <script src="bower_components/angular-resource/angular-resource.js"></script>
+	    <script src="bower_components/angular-route/angular-route.js"></script>
+	    <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
+	    <script src="bower_components/angular-touch/angular-touch.js"></script>
+	    <script src="bower_components/angular-aria/angular-aria.js"></script>
+	    <script src="bower_components/angular-messages/angular-messages.js"></script>
+	    <script src="bower_components/angular-material/angular-material.js"></script>
+	    <script src="bower_components/angular-utf8-base64/angular-utf8-base64.js"></script>
+	    <!-- endbower -->
+	    <!-- endbuild -->
+       <script src="properties/connections.js"></script>
+
+        <!-- build:js({.tmp,app}) scripts/scripts.js -->
+
+        <script src="scripts/js/app/app.js"></script>
+        <script src="scripts/js/app/app-constants.js"></script>
+        <script src="scripts/js/app/common/url.service.js"></script>
+        <script src="scripts/js/app/main.controller.js"></script>
+        <script src="scripts/js/app/about/controllers/about.controller.js"></script>
+        <script src="scripts/js/app/directives/tbidinput.directive.js"></script>
+  		<script src="scripts/js/app/directives/user-enter-key-press.js"></script>
+  
+         <script src="scripts/js/app/common/base64.service.js"></script>
+        <script src="scripts/js/app/signin/controllers/login.controller.js"></script>
+        <script src="scripts/js/app/signin/controllers/logout.controller.js"></script>
+        <script src="scripts/js/app/signin/services/login.service.js"></script>
+        <script src="scripts/js/app/signin/services/login-url.service.js"></script>
+
+ 		<script src="scripts/js/app/signup/services/pre-login.service.js"></script>
+        <script src="scripts/js/app/signup/controllers/register.controller.js"></script>
+        <script src="scripts/js/app/signup/services/register.service.js"></script>
+        <script src="scripts/js/app/signup/services/register-url.service.js"></script>
+        
+        <script src="scripts/js/app/changepassword/controllers/change-password.controller.js"></script>
+        <script src="scripts/js/app/changepassword/services/change-password.service.js"></script>
+ 		<script src="scripts/js/app/changepassword/services/change-password-url.service.js"></script>
+ 
+         <script src="scripts/js/app/changeAvatar/controllers/change-avatar.controller.js"></script>
+        <script src="scripts/js/app/changeAvatar/services/change-avatar.service.js"></script>
+ 		<script src="scripts/js/app/changeAvatar/services/change-avatar-url.service.js"></script>
+ 		
+        <script src="scripts/js/app/directives/post.js"></script>
+        <script src="scripts/js/app/post/services/post-url.service.js"></script>
+        <script src="scripts/js/app/directives/create-post.directive.js"></script>
+        <script src="scripts/js/app/directives/category-filter.directive.js"></script>
+        <script src="scripts/js/app/filters.js"></script>
+        <script src="scripts/js/app/common/modal.service.js"></script>
+        <script src="scripts/js/app/common/ajaxServices.js"></script>
+
+        <script src="scripts/js/app/global.controller.js"></script>
+
+        <script src="scripts/js/app/post/services/post.service.js"></script>
+        <script src="scripts/js/app/common/validation.service.js"></script>
+        <script src="scripts/js/app/common/error-messages.service.js"></script>
+        <script src="scripts/js/app/post/services/create-post.service.js"></script>
+		<script src="scripts/js/app/post/services/create-post-url.service.js"></script>
+		
+        <!-- Image Upload - START  -->
+        <script src="scripts/js/app/directives/file-upload.directive.js"></script>
+        <script src="scripts/js/app/common/file-upload.js"></script>
+   		  <script src="scripts/js/app/directives/drag-image-upload.directive.js"></script>
+        <!-- Image Upload - END  -->
+
+
+
+         <!-- Notification Service  - START -->
+         <script src="scripts/js/app/notifications/controllers/notification.controller.js"></script>
+          <script src="scripts/js/app/notifications/controllers/userposts.controller.js"></script>
+          <script src="scripts/js/app/notifications/controllers/notificationlist.controller.js"></script>
+         <script src="scripts/js/app/notifications/services/notification.service.js"></script>
+         <script src="scripts/js/app/notifications/services/notifications-url.service.js"></script>
+         <script src="scripts/js/app/directives/notification-item.directive.js"></script>
+         <script src="scripts/js/app/directives/notification-showmore-item.directive.js"></script>
+         <script src="scripts/js/app/directives/notification-post.directive.js"></script>
+         
+         <!-- Notification Service  - END -->
+
+   <!-- User Profile - START -->
+    <script src="scripts/js/app/directives/user-profile-post.directives.js"></script>
+    <script src="scripts/js/app/directives/user-profile-post-comment.directive.js"></script>
+    <script src="scripts/js/app/userprofile/controllers/user-profile.controller.js"></script>
+    <script src="scripts/js/app/userprofile/services/user-profile.service.js"></script>
+   <!-- User Profile - END -->
+
+
+   <!-- Infinite scroll - START -->
+    <script src='lib/ng-infinite-scroll.js'></script>
+   <!-- Infinite scroll - END -->
+
+    <script src="scripts/js/app/googlemap/controllers/feed.controller.js"></script>
+    <script src="scripts/js/app/googlemap/services/map.service.js"></script>
+        
+   <script type="text/javascript" src="./lib/loader.js"></script> 
+    <script src="scripts/google-map.js"></script>
+   <!-- endbuild -->
+</body>
+</html>

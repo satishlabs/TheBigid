@@ -1,0 +1,96 @@
+ <div class="col-lg-2 col-md-2 col-sm-2">
+
+           <div class="col-lg-1 col-md-1 col-sm-1">
+           		<div class="upvoteDownvoteClickcase">
+				<div 
+					ng-show="data.voteDetails.pushActivate && userdata.pushAvailabilityNo > 0 && (!checkOwnerOfThePost(data.userId))"
+					class="upVote-pushRemaining-style">
+					{{userdata.pushAvailabilityNo}}
+					<button ng-hide="data.voteDetails.pushActivated"
+						style="border: none;"
+						class="glyphicon glyphicon-hand-up generalbgcolor" 
+						ng-disabled="disablePushforThisPost && data.voteDetails.pushActivated"
+						ng-click="doPushUpVote(data.id,data.voteDetails.voteCount,$index);disablePushforThisPost=true;data.voteDetails.pushActivated=true;">
+					</button>
+					<button ng-show="data.voteDetails.pushActivated"
+						style="border: none;"
+						class="glyphicon glyphicon-hand-up ClickedStatusYes generalbgcolor" 
+						ng-disabled="disablePushforThisPost && data.voteDetails.pushActivated">
+					</button>					
+				</div> 
+
+				<div class="downVoteClick" 
+					ng-show="(data.voteDetails.reportedNSFW && (!checkOwnerOfThePost(data.userId)))"
+					class="upVote-pushRemaining-style">
+					<button ng-hide="data.voteDetails.reportedIsNSFW"
+						style="border: none;" 
+						class="glyphicon glyphicon-warning-sign generalbgcolor" 
+						ng-disabled="data.voteDetails.reportedIsNSFW"	
+						ng-click="downVotedTag(data.id,data.title);">
+					</button>					
+					<button ng-show="data.voteDetails.reportedIsNSFW"
+						style="border: none;" 
+						class="glyphicon glyphicon-warning-sign ClickedStatusYes generalbgcolor"  
+						ng-disabled="data.voteDetails.reportedIsNSFW"	
+						ng-click="downVotedTag(data.id,data.title);">
+					</button>
+				</div>
+			 </div>
+           </div>
+           
+           
+			<div class="col-lg-2 col-md-2 col-sm-2">
+				<div class="row">
+					<div class="col-lg-2 col-md-2 col-sm-2 votes">
+						<ul>
+							<!-- <li class="close-post"><span ng-click="expand()" class="glyphicon glyphicon-remove close-post-position"></span></li> -->
+							<li>
+								<button ng-hide="data.voteDetails.upVote" 
+								  style="border: none;"
+								  ng-disabled="data.voteDetails.upVote"
+								  ng-click="doUpVote(data.id,data.voteDetails.voteCount);upVoteAvail=false;downVoteAvail=true;"
+								  class="glyphicon glyphicon-menu-up generalbgcolor">
+								</button>
+								<button ng-show="data.voteDetails.upVote"
+								  style="border: none;"
+								  ng-disabled="data.voteDetails.upVote"
+								  ng-click="doUpVote(data.id,data.voteDetails.voteCount);upVoteAvail=false;downVoteAvail=true;"
+								  class="glyphicon glyphicon-menu-up ClickedStatusYes generalbgcolor">
+								</button>								
+							</li>
+							<li class="vote-count"><span>{{data.voteDetails.voteCount|| 0}}</span></li>
+							<li>
+								<button ng-hide="data.voteDetails.downVote"
+									style="border: none;"
+									ng-disabled="data.voteDetails.downVote"
+									ng-click="doDownVote(data.id,data.voteDetails.voteCount);upVoteAvail=true;downVoteAvail=false;"
+									class="glyphicon glyphicon-menu-down generalbgcolor">
+								</button>
+								<button ng-show="data.voteDetails.downVote"
+									style="border: none;"
+									ng-disabled="data.voteDetails.downVote"
+									ng-click="doDownVote(data.id,data.voteDetails.voteCount);upVoteAvail=true;downVoteAvail=false;"
+									class="glyphicon glyphicon-menu-down ClickedStatusYes generalbgcolor">
+								</button>								
+							</li>
+						</ul>
+					</div>
+				</div>
+
+				<div class="row save-row">
+					<div class="col-sm-2 save">
+						<ul>
+						<li><div class="comments-count">{{data.comments.length}}</div></li><br>
+							<li>
+							  <div class="plus-item" ng-init="checkForSaved(data.id)">
+									<!-- <i class="glyphicon glyphicon-plus" ng-click="addTagsExpand(data.userId);"></i> -->
+								<i class="glyphicon glyphicon-plus" ng-hide="data.postSavedbythisUser" ng-click="savePost(data.id);" ng-disabled="data.postSavedbythisUser"></i>
+								<i class="glyphicon glyphicon-plus ClickedStatusYes" ng-show="data.postSavedbythisUser" ></i>
+							   </div>
+							</li>
+							<li class="plus-count"><span>{{data.savedPostCount}}</span></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+</div>

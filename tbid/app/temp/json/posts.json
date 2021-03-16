@@ -1,0 +1,1250 @@
+{
+	"posts": [{
+			"id": 3,
+			"title": "The City of London",
+			"body": "The Romans created the first established town - a small garrison town they called Londinium - in or just after AD43. So whoever was the General in charge of the Roman army that invaded and conquered Britain - i.e. the first Roman Governor, Aulus Plautius, could be said to have 'discovered' London.",
+			"tags": ["Knowledge", "Quiz", "ToBeKnown", "Interesting"],
+			"postType": "GENERAL",
+			"postCategory": "SMALL",
+			"postUserInputCategory": "",
+			"postCreatedTime": "Wed May 5 2017 15:26:00 GMT+0530 (India Standard Time)",
+			"locationArea": "City of London, London, United Kingdom",				
+			"longitude": -0.09098519999997734,
+			"latitude": 51.5123443,
+			"imgPath": "london.png",
+			"toField": "",
+			"fromField": "",
+			"username": "Chandan",
+			"userId": "user_Chandan123",			
+			"anonymous": false,
+			"nswf": null,
+			"expand": false,
+			"enableNotificationFromUser": false,
+			"eventDate":"",
+			"eventDescription":"",
+			"caption":"",
+			"postQuestion":"",
+			"postThought":"",
+			"postLink":"",
+		    "postDescription":"",	
+            "savedPost":true,	            	    	    		
+			"voteDetails": {
+				"voteCount": 5,
+				"upVote": false,				
+				"downVote": false,
+				"upVotedTimeByMe": "",
+				"downVotedTimeByMe": "",		
+				"pushActivatedTimeByMe" : "",	
+				"pushCount": 1,									
+				"pushActivate": false,
+				"pushActivated": false,
+				"reportedNSFW": false,
+				"reportedIsNSFW": false,				
+				"reportedNSFWReason": ""
+			},
+			"comments": [{
+					"commentId": "P1C1",
+					"commentPostedBy": "CommentUser1a",
+					"commentContent": "comment1 -  User1a - 1st Post",
+					"upVote": false,
+					"downVote": true,					
+					"voteCount": 5,
+					"commentPostedTime": "",
+					"replies": [{
+							"replyId": "P1C1R1",
+							"replyCommentBy": "Replier1ForCommentUser1a",
+							"replyCommentContent": "reply1 - comment1 -  User1a - 1st Post",
+							"voteCount": 1,
+							"replyCommentTime": "",
+							"upVote": true
+						},
+						{
+							"replyId": "P1C1R2",
+							"replyCommentBy": "Replier2ForCommentUser1a",
+							"replyCommentContent": "reply2 - comment1 -  User1a - 1st Post",
+							"voteCount": 4,
+							"replyCommentTime": "",
+							"upVote": false
+						}
+					]
+				},
+				{
+					"commentId": "P1C2",
+					"commentPostedBy": "CommentUser2a",
+					"commentContent": "comment2 -  User2a - 1st Post",
+					"upVote": false,
+					"downVote": true,					
+					"voteCount": 4,
+					"commentPostedTime": "",
+					"replies": [{
+							"replyId": "P1C2R1",
+							"replyCommentBy": "Replier1ForCommentUser2",
+							"replyCommentContent": "reply1 - comment2 -  User2a - 1st Post",
+							"voteCount": 3,
+							"replyCommentTime": "",
+							"upVote": false
+						},
+						{
+							"replyId": "P1C2R2",
+							"replyCommentBy": "Replier2ForCommentUser2",
+							"replyCommentContent": "reply2 - comment2 -  User2a - 1st Post",
+							"voteCount": 1,
+							"replyCommentTime": "",
+							"upVote": false
+						}
+					]
+
+				},
+				{
+					"commentId": "P1C3",
+					"commentPostedBy": "CommentUser3a",
+					"commentContent": "comment3 -  User3a - 1st Post",
+					"upVote": false,
+					"downVote": true,					
+					"voteCount": 6,
+					"commentPostedTime": "",
+					"replies": []
+				},
+				{
+					"commentId": "P1C4",
+					"commentPostedBy": "CommentUser4a",
+					"commentContent": "comment4 -  User3a - 1st Post",
+					"upVote": false,
+					"downVote": true,					
+					"voteCount": 2,
+					"commentPostedTime": "",
+					"replies": []
+				}
+			]
+
+		},
+		{
+			"id": 5,
+			"title": "Design Thinking Event in Bangalore",
+			"body": "Understanding the fundamentals of Design Thinking. Clearing myths about design thinking. Interactive Sessions. Case Studies and Activity based learning.Practical insights and Mini Project. Interested people can attend the event at Big Brewsky, Bangalore(6:30pm)",
+			"tags": ["Technology", "Question", "Knowledge"],
+			"postType": "EVENT",
+			"postCategory": "SMALL",
+			"postUserInputCategory": "",
+			"postCreatedTime": "Wed May 5 2017 14:26:00 GMT+0530 (India Standard Time)",
+			"locationArea": "Bangalore, Karnataka, India",				
+			"longitude": 77.59456269999998,
+			"latitude": 12.9715987,
+			"imgPath": "designthinking.png",
+			"toField": "Wissen Employees",
+			"fromField": "Wissen HR Team",
+			"username": "Chandan",
+			"userId": "user_Chandan123",		
+			"anonymous": true,
+			"nswf": null,
+			"expand": false,
+			"enableNotificationFromUser": false,
+			"eventDate":"Wed May 8 2017 15:26:00 GMT+0530 (India Standard Time)",
+			"eventDescription":"Event Description",
+			"caption":"",
+			"postQuestion":"",
+			"postThought":"",
+			"postLink":"",
+		    "postDescription":"",
+			"savedPost":false,	
+			"voteDetails": {
+				"voteCount": 3,
+				"upVote": false,				
+				"downVote": false,
+				"upVotedTimeByMe": "",
+				"downVotedTimeByMe": "",		
+				"pushActivatedTimeByMe" : "",	
+				"pushCount": 0,									
+				"pushActivate": false,
+				"pushActivated": false,
+				"reportedNSFW": false,
+				"reportedIsNSFW": false,				
+				"reportedNSFWReason": ""
+			},
+			"comments": [{
+					"commentId": "P2C1",
+					"commentPostedBy": "CommentUser1b",
+					"commentContent": "comment1 -  User1b - 2nd Post",
+					"upVote": false,
+					"downVote": false,					
+					"voteCount": 4,
+					"commentPostedTime": "",
+					"replies": [{
+						"replyId": "P2C1R1",
+						"replyCommentBy": "Replier1ForCommentUser1b",
+						"replyCommentContent": "reply1 - comment1 -  User1b - 2nd Post",
+						"voteCount": 1,
+						"replyCommentTime": "",
+							"upVote": false
+					}]
+
+				},
+				{
+					"commentId": "P2C2",
+					"commentPostedBy": "CommentUser2b",
+					"commentContent": "comment2 -  User2b - 2nd Post",
+					"upVote": false,
+					"downVote": false,						
+					"voteCount": 3,
+					"commentPostedTime": "",
+					"replies": [{
+							"replyId": "P2C2R1",
+							"replyCommentBy": "Replier1ForCommentUser2b",
+							"replyCommentContent": "reply1 - comment2 -  User2b - 2nd Post",
+							"voteCount": 1,
+							"replyCommentTime": "",
+							"upVote": false
+						},
+						{
+							"replyId": "P2C2R2",
+							"replyCommentBy": "Replier2ForCommentUser2b",
+							"replyCommentContent": "reply2 - comment2 -  User2b - 2nd Post",
+							"voteCount": 4,
+							"replyCommentTime": "",
+							"upVote": false
+						}
+					]
+				},
+				{
+					"commentId": "P2C3",
+					"commentPostedBy": "CommentUser3b",
+					"commentContent": "comment3 -  User3b - 2nd Post",
+					"upVote": false,
+					"downVote": false,						
+					"voteCount": 4,
+					"commentPostedTime": "",
+					"replies": [{
+							"replyId": "P2C3R1",
+							"replyCommentBy": "Replier1ForCommentUser3b",
+							"replyCommentContent": "reply1 - comment3 -  User3b - 2nd Post",
+							"voteCount": 1,
+							"replyCommentTime": "",
+							"upVote": false
+						},
+						{
+							"replyId": "P2C3R2",
+							"replyCommentBy": "Replier2ForCommentUser3b",
+							"replyCommentContent": "reply2 - comment3 -  User3b - 2nd Post",
+							"voteCount": 4,
+							"replyCommentTime": "",
+							"upVote": false
+						},
+						{
+							"replyId": "P2C3R3",
+							"replyCommentBy": "Replier3ForCommentUser3b",
+							"replyCommentContent": "reply3 - comment3 -  User3b - 2nd Post",
+							"voteCount": 6,
+							"replyCommentTime": "",
+							"upVote": false
+						},
+						{
+							"replyId": "P2C3R4",
+							"replyCommentBy": "Replier4ForCommentUser3b",
+							"replyCommentContent": "reply4 - comment3 -  User3b - 2nd Post",
+							"voteCount": 8,
+							"replyCommentTime": "",
+							"upVote": false
+						},
+						{
+							"replyId": "P2C3R5",
+							"replyCommentBy": "Replier5ForCommentUser3b",
+							"replyCommentContent": "reply5 - comment3 -  User3b - 2nd Post",
+							"voteCount": 2,
+							"replyCommentTime": "",
+							"upVote": false
+						},
+						{
+							"replyId": "P2C3R6",
+							"replyCommentBy": "Replier6ForCommentUser3b",
+							"replyCommentContent": "reply6 - comment3 -  User3b - 2nd Post",
+							"voteCount": 4,
+							"replyCommentTime": "",
+							"upVote": false
+						},
+						{
+							"replyId": "P2C3R7",
+							"replyCommentBy": "Replier7ForCommentUser3b",
+							"replyCommentContent": "reply7 - comment3 -  User3b - 2nd Post",
+							"voteCount": 4,
+							"replyCommentTime": "",
+							"upVote": false
+						},
+						{
+							"replyId": "P2C3R8",
+							"replyCommentBy": "Replier8ForCommentUser3b",
+							"replyCommentContent": "reply8 - comment3 -  User3b - 2nd Post",
+							"voteCount": 6,
+							"replyCommentTime": "",
+							"upVote": false
+						},
+						{
+							"replyId": "P2C3R9",
+							"replyCommentBy": "Replier9ForCommentUser3b",
+							"replyCommentContent": "reply9 - comment3 -  User3b - 2nd Post",
+							"voteCount": 8,
+							"replyCommentTime": "",
+							"upVote": false
+						},
+						{
+							"replyId": "P2C3R10",
+							"replyCommentBy": "Replier10ForCommentUser3b",
+							"replyCommentContent": "reply10 - comment3 -  User3b - 2nd Post",
+							"voteCount": 10,
+							"replyCommentTime": "",
+							"upVote": false
+						}
+					]
+				}
+			]
+
+		},
+		{
+			"id": 6,
+			"title": "Lets go for a long drive!",
+			"body": "Guys..Come on! its time for us to hit these roads...Shall we plan a long drive through this section. This is Ladhak, a region in Indian state of Jammu and Kashmir that currently extends from the Kunlun mountain range to the main Great Himalayas to the south.",
+			"tags": ["LongDrive", "Travel", "Journey", "Adventure", "Group"],
+			"postType": "VISUAL",
+			"postCategory": "BIG",
+			"postUserInputCategory": "",
+			"postCreatedTime": "Wed May 5 2017 12:26:00 GMT+0530 (India Standard Time)",
+			"locationArea": "Mumbai, Maharashtra, India",			
+			"longitude": 72.87765590000004,
+			"latitude": 19.0759837,
+			"imgPath": "longdrive.png",
+			"toField": "Long Drive Group",
+			"fromField": "Trip Organizers",
+			"username": "Koushik",
+			"userId": "user_Koushik246",		
+			"anonymous": true,
+			"nswf": null,
+			"expand": false,
+			"enableNotificationFromUser": true,
+			"eventDate":"",
+			"eventDescription":"",
+			"caption":"Heaven for those who like to drive!",
+			"postQuestion":"",
+			"postThought":"",
+			"postLink":"",
+		    "postDescription":"",	
+			"savedPost":false,			    		
+			"voteDetails": {
+				"voteCount": 8,
+				"upVote": false,				
+				"downVote": false,
+				"upVotedTimeByMe": "",
+				"downVotedTimeByMe": "",		
+				"pushActivatedTimeByMe" : "",	
+				"pushCount": 0,									
+				"pushActivate": false,
+				"pushActivated": false,
+				"reportedNSFW": false,
+				"reportedIsNSFW": false,				
+				"reportedNSFWReason": ""
+			},
+			"comments": [{
+					"commentId": "P3C1",
+					"commentPostedBy": "user_Chandan123",
+					"commentContent": "comment1 -  User1a - 1st Post",
+					"upVote": false,
+					"downVote": false,						
+					"voteCount": 4,
+					"commentPostedTime": "",
+					"replies": [{
+						"replyId": "P3C1R1",
+						"replyCommentBy": "Replier1ForCommentUser1a",
+						"replyCommentContent": "reply1 - comment1 -  User1a - 3rd Post",
+						"voteCount": 2,
+						"replyCommentTime": "",
+						"upVote": false
+					}]
+				},
+				{
+					"commentId": "P3C2",
+					"commentPostedBy": "CommentUser2a",
+					"commentContent": "comment2 -  User2a - 3rd Post",
+					"upVote": false,
+					"downVote": false,						
+					"voteCount": 8,
+					"commentPostedTime": "",
+					"replies": [{
+							"replyId": "P3C2R1",
+							"replyCommentBy": "Replier1ForCommentUser2",
+							"replyCommentContent": "reply1 - comment2 -  User2a - 3rd Post",
+							"voteCount": 4,
+							"replyCommentTime": "",
+							"upVote": false
+						},
+						{
+							"replyId": "P3C2R2",
+							"replyCommentBy": "Replier2ForCommentUser2",
+							"replyCommentContent": "reply2 - comment2 -  User2a - 3rd Post",
+							"voteCount": 2,
+							"replyCommentTime": "",
+							"upVote": false
+						},
+						{
+							"replyId": "P3C2R3",
+							"replyCommentBy": "Replier3ForCommentUser2",
+							"replyCommentContent": "reply3 - comment2 -  User2a - 3rd Post",
+							"voteCount": 4,
+							"replyCommentTime": "",
+							"upVote": false
+						},
+						{
+							"replyId": "P3C2R4",
+							"replyCommentBy": "Replier4ForCommentUser2",
+							"replyCommentContent": "reply4 - comment2 -  User2a - 3rd Post",
+							"voteCount": 2,
+							"replyCommentTime": "",
+							"upVote": false
+						}
+					]
+
+				},
+				{
+					"commentId": "P3C3",
+					"commentPostedBy": "CommentUser3a",
+					"commentContent": "comment3 -  User3a - 3rd Post",
+					"upVote": false,
+					"downVote": false,						
+					"voteCount": 4,
+					"commentPostedTime": "",
+					"replies": []
+				},
+				{
+					"commentId": "P3C4",
+					"commentPostedBy": "CommentUser4a",
+					"commentContent": "comment4 -  User3a - 3rd Post",
+					"upVote": false,
+					"downVote": false,						
+					"voteCount": 6,
+					"commentPostedTime": "",
+					"replies": []
+				}
+			]
+
+		},
+
+		{
+			"id": 8,
+			"title": "If Hard Work is the Key to Success, then why is a laborer not Successful?",
+			"body": "As long as one works hard to fill the stomach and cover the body, it will remain an act for mere subsistence. There should be a desire to come up better in life, channeled through effective and ethically correct plans and supported by hard, focused and committed work. Then, there is good possibility of success.",
+			"tags": ["Question", "Debate", "Discussion", "ThinkAboutIt"],
+			"postType": "QUESTION",
+			"postCategory": "SERIOUS",
+			"postUserInputCategory": "",
+			"postCreatedTime": "Wed May 5 2017 13:26:00 GMT+0530 (India Standard Time)",
+			"locationArea": "Whitehouse, TX, United States",			
+			"longitude": -95.22550409999997,
+			"latitude": 32.2268212,
+			"imgPath": "hardwork.png",
+			"toField": "",
+			"fromField": "",
+			"username": "Mathew",
+			"userId": "user_Mathew446",			
+			"anonymous": false,
+			"nswf": null,
+			"expand": false,
+			"enableNotificationFromUser": true,
+			"eventDate":"",
+			"eventDescription":"",
+			"caption":"",
+			"postQuestion":"Post Question",
+			"postThought":"Post Thought",
+			"postLink":"",
+		    "postDescription":"",		
+			"savedPost":false,			    	
+			"voteDetails": {
+				"voteCount": 6,
+				"upVote": false,				
+				"downVote": false,
+				"upVotedTimeByMe": "",
+				"downVotedTimeByMe": "",		
+				"pushActivatedTimeByMe" : "",	
+				"pushCount": 1,									
+				"pushActivate": false,
+				"pushActivated": false,
+				"reportedNSFW": false,
+				"reportedIsNSFW": false,				
+				"reportedNSFWReason": ""
+			},
+			"comments": [{
+					"commentId": "P4C1",
+					"commentPostedBy": "CommentUser1a",
+					"commentContent": "comment1 -  User1a - 4th Post",
+					"upVote": false,
+					"downVote": false,						
+					"voteCount": 2,
+					"commentPostedTime": "",
+					"replies": [{
+						"replyId": "P4C1R1",
+						"replyCommentBy": "Replier1ForCommentUser1a",
+						"replyCommentContent": "reply1 - comment1 -  User1a - 4th Post",
+						"voteCount": 1,
+						"replyCommentTime": "",
+						"upVote": false
+					}]
+				},
+				{
+					"commentId": "P4C2",
+					"commentPostedBy": "CommentUser2a",
+					"commentContent": "comment2 -  User2a - 4th Post",
+					"upVote": false,
+					"downVote": false,						
+					"voteCount": 8,
+					"commentPostedTime": "",
+					"replies": [{
+							"replyId": "P4C2R1",
+							"replyCommentBy": "Replier1ForCommentUser2",
+							"replyCommentContent": "reply1 - comment2 -  User2a - 4th Post",
+							"voteCount": 1,
+							"replyCommentTime": "",
+							"upVote": false
+						},
+						{
+							"replyId": "P4C2R2",
+							"replyCommentBy": "Replier2ForCommentUser2",
+							"replyCommentContent": "reply2 - comment2 -  User2a - 4th Post",
+							"voteCount": 1,
+							"replyCommentTime": "",
+							"upVote": false
+						}
+					]
+
+				},
+				{
+					"commentId": "P4C3",
+					"commentPostedBy": "CommentUser3a",
+					"commentContent": "comment3 -  User3a - 4th Post",
+					"upVote": false,
+					"downVote": false,						
+					"voteCount": 2,
+					"commentPostedTime": "",
+					"replies": [{
+						"replyId": "P4C3R1",
+						"replyCommentBy": "Replier1ForCommentUser2",
+						"replyCommentContent": "reply1 - comment3 -  User3a - 4th Post",
+						"voteCount": 1,
+						"replyCommentTime": "",
+						"upVote": false
+					}, {
+						"replyId": "P4C3R2",
+						"replyCommentBy": "Replier2ForCommentUser2",
+						"replyCommentContent": "reply2 - comment3 -  User3a - 4th Post",
+						"voteCount": 1,
+						"replyCommentTime": "",
+						"upVote": false
+					}]
+				},
+				{
+					"commentId": "P4C4",
+					"commentPostedBy": "CommentUser4a",
+					"commentContent": "comment4 -  User4a - 4th Post",
+					"upVote": false,
+					"downVote": false,						
+					"voteCount": 1,
+					"commentPostedTime": "",
+					"replies": [{
+						"replyId": "P4C4R1",
+						"replyCommentBy": "Replier1ForCommentUser4a",
+						"replyCommentContent": "reply1 - comment4 -  User4a - 4th Post",
+						"voteCount": 1,
+						"replyCommentTime": "",
+						"upVote": false
+					}]
+				}
+			]
+
+		},
+
+
+		{
+			"id": 10,
+			"title": "Book IPL Ticket",
+			"body": "IPL T20 tickets will be available at BookMyShow, Eventsnow & Ticketgenie. Tickets will also be made available in several retail outlets in the cities where matches will be played. They will also be available at the stadium box office at all the venues where the games are slated to be held. IPL 2017 tickets price: The ticket price ranges from Rs 800 – Rs 4,000 depending on venue and the stands chosen.",
+			"tags": ["Sport", "Cricket", "IPL", "Exciting", "BookTicket"],
+			"postType": "LINK",
+			"postCategory": "CASUAL",
+			"postUserInputCategory": "",
+			"postCreatedTime": "Wed May 5 2017 18:26:00 GMT+0530 (India Standard Time)",
+			"locationArea": "Dharamsala, Himachal Pradesh, India",				
+			"longitude": 76.32340369999997,
+			"latitude": 32.21904200000001,
+			"imgPath": "",
+			"toField": "",
+			"fromField": "",
+			"username": "James",
+			"userId": "user_James484",			
+			"anonymous": true,
+			"nswf": null,
+			"expand": false,
+			"enableNotificationFromUser": false,
+			"eventDate":"",
+			"eventDescription":"",
+			"caption":"",
+			"postQuestion":"",
+			"postThought":"",
+			"postLink":"Post Link",
+		    "postDescription":"Link Description",	
+			"savedPost":false,			    		
+			"voteDetails": {
+				"voteCount": 6,
+				"upVote": false,				
+				"downVote": false,
+				"upVotedTimeByMe": "",
+				"downVotedTimeByMe": "",		
+				"pushActivatedTimeByMe" : "",	
+				"pushCount": 0,									
+				"pushActivate": false,
+				"pushActivated": false,
+				"reportedNSFW": false,
+				"reportedIsNSFW": false,				
+				"reportedNSFWReason": ""
+			},
+			"comments": [{
+					"commentId": "P4C1",
+					"commentPostedBy": "CommentUser1a",
+					"commentContent": "comment1 -  User1a - 4th Post",
+					"upVote": false,
+					"downVote": false,						
+					"voteCount": 2,
+					"commentPostedTime": "",
+					"replies": [{
+						"replyId": "P4C1R1",
+						"replyCommentBy": "Replier1ForCommentUser1a",
+						"replyCommentContent": "reply1 - comment1 -  User1a - 4th Post",
+						"voteCount": 1,
+						"replyCommentTime": "",
+						"upVote": false
+					}]
+				},
+				{
+					"commentId": "P4C2",
+					"commentPostedBy": "CommentUser2a",
+					"commentContent": "comment2 -  User2a - 4th Post",
+					"upVote": false,
+					"downVote": false,						
+					"voteCount": 8,
+					"commentPostedTime": "",
+					"replies": [{
+							"replyId": "P4C2R1",
+							"replyCommentBy": "Replier1ForCommentUser2",
+							"replyCommentContent": "reply1 - comment2 -  User2a - 4th Post",
+							"voteCount": 1,
+							"replyCommentTime": "",
+							"upVote": false
+						},
+						{
+							"replyId": "P4C2R2",
+							"replyCommentBy": "Replier2ForCommentUser2",
+							"replyCommentContent": "reply2 - comment2 -  User2a - 4th Post",
+							"voteCount": 1,
+							"replyCommentTime": "",
+							"upVote": false
+						}
+					]
+
+				},
+				{
+					"commentId": "P4C3",
+					"commentPostedBy": "CommentUser3a",
+					"commentContent": "comment3 -  User3a - 4th Post",
+					"upVote": false,
+					"downVote": false,						
+					"voteCount": 2,
+					"commentPostedTime": "",
+					"replies": [{
+							"replyId": "P4C3R1",
+							"replyCommentBy": "Replier1ForCommentUser3",
+							"replyCommentContent": "reply1 - comment3 -  User3a - 4th Post",
+							"voteCount": 4,
+							"replyCommentTime": "",
+							"upVote": false
+						},
+						{
+							"replyId": "P4C3R2",
+							"replyCommentBy": "Replier2ForCommentUser3",
+							"replyCommentContent": "reply2 - comment3 -  User3a - 4th Post",
+							"voteCount": 3,
+							"replyCommentTime": "",
+							"upVote": false
+						}
+					]
+				},
+				{
+					"commentId": "P4C4",
+					"commentPostedBy": "CommentUser4a",
+					"commentContent": "comment4 -  User3a - 4th Post",
+					"upVote": false,
+					"downVote": false,						
+					"voteCount": 1,
+					"commentPostedTime": "",
+					"replies": [{
+							"replyId": "P4C4R1",
+							"replyCommentBy": "Replier1ForCommentUser2",
+							"replyCommentContent": "reply1 - comment4 -  User3a - 4th Post",
+							"voteCount": 1,
+							"replyCommentTime": "",
+							"upVote": false
+						},
+						{
+							"replyId": "P4C4R2",
+							"replyCommentBy": "Replier2ForCommentUser2",
+							"replyCommentContent": "reply2 - comment4 -  User3a - 4th Post",
+							"voteCount": 1,
+							"replyCommentTime": "",
+							"upVote": false
+						}
+					]
+				},
+				{
+					"commentId": "P4C5",
+					"commentPostedBy": "CommentUser4a",
+					"commentContent": "comment5 -  User3a - 4th Post",
+					"upVote": false,
+					"downVote": false,						
+					"voteCount": 0,
+					"commentPostedTime": "",
+					"replies": []
+				}
+			]
+
+		},
+
+		{
+			"id": 12,
+			"title": "Just for Laughs",
+			"body": "Just for Laughs was founded in 1983 by Gilbert Rozon as a two-day French language event. In 1985, Andy Nulman joined the festival's staff and introduced English language events as well; under Nulman's stewardship, the festival increased to a full month, with French-speaking performers during the first half, and English speakers in the second half. International and non-verbal acts are scattered throughout the program.",
+			"tags": ["ROFL", "Fun", "Entertainment", "LMAO"],
+			"postType": "GENERAL",
+			"postCategory": "FUNNY",
+			"postUserInputCategory": "",
+			"postCreatedTime": "Wed May 5 2017 20:26:00 GMT+0530 (India Standard Time)",
+			"locationArea": "Montreal, QC, Canada",				
+			"longitude": -73.56725599999999,
+			"latitude": 45.5016889,
+			"imgPath": "justforlaughs.png",
+			"toField": "",
+			"fromField": "",
+			"username": "Andrew",
+			"userId": "user_Andrew684",			
+			"anonymous": false,
+			"nswf": null,
+			"expand": false,
+			"enableNotificationFromUser": false,
+			"eventDate":"",
+			"eventDescription":"",
+			"caption":"",
+			"postQuestion":"",
+			"postThought":"",
+			"postLink":"",
+		    "postDescription":"",	
+			"savedPost":false,			    		
+			"voteDetails": {
+				"voteCount": 20,
+				"upVote": false,				
+				"downVote": false,
+				"upVotedTimeByMe": "",
+				"downVotedTimeByMe": "",		
+				"pushActivatedTimeByMe" : "",	
+				"pushCount": 0,									
+				"pushActivate": false,
+				"pushActivated": false,
+				"reportedNSFW": false,
+				"reportedIsNSFW": false,				
+				"reportedNSFWReason": ""
+			},
+			"comments": [{
+					"commentId": "P5C1",
+					"commentPostedBy": "CommentUser1a",
+					"commentContent": "comment1 -  User1a - 5th Post",
+					"upVote": false,
+					"downVote": false,						
+					"voteCount": 4,
+					"commentPostedTime": "",
+					"replies": [{
+							"replyId": "P5C1R1",
+							"replyCommentBy": "Replier1ForCommentUser1a",
+							"replyCommentContent": "reply1 - comment1 -  User1a - 5th Post",
+							"voteCount": 1,
+							"replyCommentTime": "",
+							"upVote": false
+						},
+						{
+							"replyId": "P5C1R2",
+							"replyCommentBy": "Replier1ForCommentUser1a",
+							"replyCommentContent": "reply2 - comment1 -  User1a - 5th Post",
+							"voteCount": 4,
+							"replyCommentTime": "",
+							"upVote": false
+						}
+					]
+				},
+				{
+					"commentId": "P4C2",
+					"commentPostedBy": "CommentUser2a",
+					"commentContent": "comment2 -  User2a - 5th Post",
+					"upVote": false,
+					"downVote": false,						
+					"voteCount": 6,
+					"commentPostedTime": "",
+					"replies": [{
+							"replyId": "P5C2R1",
+							"replyCommentBy": "Replier1ForCommentUser2",
+							"replyCommentContent": "reply1 - comment2 -  User2a - 5th Post",
+							"voteCount": 2,
+							"replyCommentTime": "",
+							"upVote": false
+						},
+						{
+							"replyId": "P5C2R2",
+							"replyCommentBy": "Replier2ForCommentUser2",
+							"replyCommentContent": "reply2 - comment2 -  User2a - 5th Post",
+							"voteCount": 4,
+							"replyCommentTime": "",
+							"upVote": false
+						}
+					]
+
+				}
+			]
+
+		},
+
+
+		{
+			"id": 14,
+			"title": "Fan of Virat Kohli",
+			"body": "Virat Kohli is an Indian international cricketer who currently captains the India national team. A right-handed batsman often regarded as one of the best batsmen in the world,Kohli was ranked eighth in ESPN's list of world's most famous athletes in 2016.He plays for the Royal Challengers Bangalore in the Indian Premier League (IPL), and has been the team's captain since 2013.",
+			"tags": ["Cricket", "IndianTeamCaptain", "Aggressive"],
+			"postType": "GENERAL",
+			"postCategory": "____",
+			"postUserInputCategory": "SPORTS",
+			"postCreatedTime": "Wed May 5 2017 22:44:00 GMT+0530 (India Standard Time)",
+			"locationArea": "New Delhi, Delhi, India",				
+			"longitude": 77.20902120000005,
+			"latitude": 28.6139391,
+			"imgPath": "viratkohli.png",
+			"toField": "",
+			"fromField": "",
+			"username": "Ronith",
+			"userId": "user_Ronith666",			
+			"anonymous": false,
+			"nswf": null,
+			"expand": false,
+			"enableNotificationFromUser": false,
+			"eventDate":"",
+			"eventDescription":"",
+			"caption":"",
+			"postQuestion":"",
+			"postThought":"",
+			"postLink":"",
+		    "postDescription":"",	
+			"savedPost":false,			    	
+			"voteDetails": {
+				"voteCount": 25,
+				"upVote": false,				
+				"downVote": false,
+				"upVotedTimeByMe": "",
+				"downVotedTimeByMe": "",		
+				"pushActivatedTimeByMe" : "",	
+				"pushCount": 6,									
+				"pushActivate": false,
+				"pushActivated": false,
+				"reportedNSFW": false,
+				"reportedIsNSFW": false,				
+				"reportedNSFWReason": ""
+			},
+			"comments": [{
+					"commentId": "P6C1",
+					"commentPostedBy": "CommentUser1a",
+					"commentContent": "comment1 -  User1a - 6th Post",
+					"upVote": false,
+					"downVote": false,						
+					"voteCount": 4,
+					"commentPostedTime": "",
+					"replies": [{
+						"replyId": "P6C1R1",
+						"replyCommentBy": "Replier1ForCommentUser1a",
+						"replyCommentContent": "reply1 - comment1 -  User1a - 6th Post",
+						"voteCount": 1,
+						"replyCommentTime": "",
+						"upVote": false
+					}]
+				},
+				{
+					"commentId": "P6C2",
+					"commentPostedBy": "CommentUser2a",
+					"commentContent": "comment2 -  User2a - 6th Post",
+					"upVote": false,
+					"downVote": false,						
+					"voteCount": 6,
+					"commentPostedTime": "",
+					"replies": [{
+							"replyId": "P6C2R1",
+							"replyCommentBy": "Replier1ForCommentUser2",
+							"replyCommentContent": "reply1 - comment2 -  User2a - 6th Post",
+							"voteCount": 2,
+							"replyCommentTime": "",
+							"upVote": false
+						},
+						{
+							"replyId": "P6C2R2",
+							"replyCommentBy": "Replier2ForCommentUser2",
+							"replyCommentContent": "reply2 - comment2 -  User2a - 6th Post",
+							"voteCount": 4,
+							"replyCommentTime": "",
+							"upVote": false
+						},
+						{
+							"replyId": "P6C2R3",
+							"replyCommentBy": "Replier1ForCommentUser2",
+							"replyCommentContent": "reply3 - comment2 -  User2a - 6th Post",
+							"voteCount": 2,
+							"replyCommentTime": "",
+							"upVote": false
+						},
+						{
+							"replyId": "P6C2R4",
+							"replyCommentBy": "Replier2ForCommentUser2",
+							"replyCommentContent": "reply4 - comment2 -  User2a - 6th Post",
+							"voteCount": 4,
+							"replyCommentTime": "",
+							"upVote": false
+						}
+					]
+
+				}
+			]
+
+		},
+
+
+		{
+			"id": 16,
+			"title": "Stone Pelting on Indian Soldiers",
+			"body": "An image of the Indian Army  tying a stone pelter on their jeep has surfaced on social media. Although several people hailed the move, quite a few termed this action as barbaric. Omar Abdullah was the first to join the voice against the Indian Army for this action. Here is the truth about the incident which happened today. You be the judge and decide for yourself whether the Indian Army did the right or wrong thing.",
+			"tags": ["Angry", "Respect", "IndianArmy"],
+			"postType": "GENERAL",
+			"postCategory": "PROVOCATIVE",
+			"postUserInputCategory": "",
+			"postCreatedTime": "Wed May 3 2017 22:44:00 GMT+0530 (India Standard Time)",
+			"locationArea": "LOC View Point Road, Kargil",				
+			"longitude": 76.12394859999995,
+			"latitude": 34.595919,
+			"imgPath": "stonepelting.png",
+			"toField": "",
+			"fromField": "",
+			"username": "Chandan",
+			"userId": "user_Chandan123",			
+			"anonymous": true,
+			"nswf": null,
+			"expand": false,
+			"enableNotificationFromUser": false,
+			"eventDate":"",
+			"eventDescription":"",
+			"caption":"",
+			"postQuestion":"",
+			"postThought":"",
+			"postLink":"",
+		    "postDescription":"",	
+			"savedPost":false,			    	
+			"voteDetails": {
+				"voteCount": 18,
+				"upVote": false,				
+				"downVote": false,
+				"upVotedTimeByMe": "",
+				"downVotedTimeByMe": "",		
+				"pushActivatedTimeByMe" : "",	
+				"pushCount": 4,									
+				"pushActivate": false,
+				"pushActivated": false,
+				"reportedNSFW": false,
+				"reportedIsNSFW": false,				
+				"reportedNSFWReason": ""
+			},
+			"comments": [{
+					"commentId": "P7C1",
+					"commentPostedBy": "CommentUser1a",
+					"commentContent": "comment1 -  User1a - 7th Post",
+					"upVote": false,
+					"downVote": false,						
+					"voteCount": 4,
+					"commentPostedTime": "",
+					"replies": [{
+						"replyId": "P7C1R1",
+						"replyCommentBy": "Replier1ForCommentUser1a",
+						"replyCommentContent": "reply1 - comment1 -  User1a - 7th Post",
+						"voteCount": 1,
+						"replyCommentTime": "",
+						"upVote": false
+					}]
+				},
+				{
+					"commentId": "P7C2",
+					"commentPostedBy": "user_Chandan123",
+					"commentContent": "comment2 -  User2a - 7th Post",
+					"upVote": false,
+					"downVote": false,						
+					"voteCount": 6,
+					"commentPostedTime": "",
+					"replies": [{
+							"replyId": "P7C2R1",
+							"replyCommentBy": "Replier1ForCommentUser2",
+							"replyCommentContent": "reply1 - comment2 -  User2a - 7th Post",
+							"voteCount": 2,
+							"replyCommentTime": "",
+							"upVote": false
+						},
+						{
+							"replyId": "P7C2R2",
+							"replyCommentBy": "Replier2ForCommentUser2",
+							"replyCommentContent": "reply2 - comment2 -  User2a - 7th Post",
+							"voteCount": 4,
+							"replyCommentTime": "",
+							"upVote": false
+						}
+					]
+
+				}
+
+			]
+
+		},
+
+
+
+		{
+			"id": 18,
+			"title": "Ragging",
+			"body": "Ragging is a practice similar to hazing in educational institutions. The word is mainly used in India, Pakistan, Bangladesh and Sri Lanka. Ragging involves existing students baiting or bullying new students. It often takes a malignant form wherein the newcomers may be subjected to psychological or physical torture.",
+			"tags": ["FeelingSad", "Fresher", "Seniors"],
+			"postType": "GENERAL",
+			"postCategory": "FUNNY",
+			"postUserInputCategory": "",
+			"postCreatedTime": "Wed May 6 2017 18:36:00 GMT+0530 (India Standard Time)",
+			"locationArea": "Kolkata, West Bengal, India",				
+			"longitude": 88.36389499999996,
+			"latitude": 22.572646,
+			"imgPath": "studentragging.png",
+			"toField": "",
+			"fromField": "",
+			"username": "Steve",
+			"userId": "user_Steve226",			
+			"anonymous": true,
+			"nswf": true,
+			"expand": false,
+			"enableNotificationFromUser": false,
+			"eventDate":"",
+			"eventDescription":"",
+			"caption":"",
+			"postQuestion":"",
+			"postThought":"",
+			"postLink":"",
+		    "postDescription":"",
+			"savedPost":false,			    			
+			"voteDetails": {
+				"voteCount": 5,
+				"upVote": false,				
+				"downVote": false,
+				"upVotedTimeByMe": "",
+				"downVotedTimeByMe": "",		
+				"pushActivatedTimeByMe" : "",	
+				"pushCount": 2,									
+				"pushActivate": false,
+				"pushActivated": false,
+				"reportedNSFW": false,
+				"reportedIsNSFW": false,				
+				"reportedNSFWReason": ""
+			},
+			"comments": [{
+					"commentId": "P8C1",
+					"commentPostedBy": "CommentUser1a",
+					"commentContent": "comment1 -  User1a - 8th Post",
+					"upVote": false,
+					"downVote": false,						
+					"voteCount": 2,
+					"commentPostedTime": "",
+					"replies": [{
+						"replyId": "P8C1R1",
+						"replyCommentBy": "Replier1ForCommentUser1a",
+						"replyCommentContent": "reply1 - comment1 -  User1a - 8th Post",
+						"voteCount": 4,
+						"replyCommentTime": "",
+						"upVote": false
+					}]
+				},
+				{
+					"commentId": "P8C1",
+					"commentPostedBy": "CommentUser1a",
+					"commentContent": "comment1 -  User1a - 8th Post",
+					"upVote": false,
+					"downVote": false,						
+					"voteCount": 6,
+					"commentPostedTime": "",
+					"replies": [{
+						"replyId": "P8C1R1",
+						"replyCommentBy": "Replier1ForCommentUser1a",
+						"replyCommentContent": "reply1 - comment1 -  User1a - 8th Post",
+						"voteCount": 0,
+						"replyCommentTime": "",
+						"upVote": false
+					}]
+				},
+				{
+					"commentId": "P8C2",
+					"commentPostedBy": "CommentUser2a",
+					"commentContent": "comment2 -  User2a - 8th Post",
+					"upVote": false,
+					"downVote": false,						
+					"voteCount": 2,
+					"commentPostedTime": "",
+					"replies": [{
+							"replyId": "P8C2R1",
+							"replyCommentBy": "Replier1ForCommentUser2",
+							"replyCommentContent": "reply1 - comment2 -  User2a - 8th Post",
+							"voteCount": 1,
+							"replyCommentTime": "",
+							"upVote": false
+						},
+						{
+							"replyId": "P8C2R2",
+							"replyCommentBy": "Replier2ForCommentUser2",
+							"replyCommentContent": "reply2 - comment2 -  User2a - 8th Post",
+							"voteCount": 0,
+							"replyCommentTime": "",
+							"upVote": false
+						}
+					]
+
+				}
+
+			]
+
+		},
+		
+		{
+			"id": 20,
+			"title": "About Graphics Interchange Format",
+			"body": "The GIF format supports up to 8 bits per pixel for each image, allowing a single image to reference its own palette of up to 256 different colors chosen from the 24-bit RGB color space. It also supports animations and allows a separate palette of up to 256 colors for each frame. These palette limitations make the GIF format less suitable for reproducing color photographs and other images with continuous color, but it is well-suited for simpler images such as graphics or logos with solid areas of color.",
+            "tags": ["design","color change"],
+			"postType": "VISUAL",
+			"postCategory": "CASUAL",
+			"postUserInputCategory": "",
+			"postCreatedTime": "Wed May 23 2017 12:26:00 GMT+0530 (India Standard Time)",
+			"locationArea": "Jalahalli Police Station, BEL Colony, Bengaluru, Karnataka, India",			
+			"longitude": 77.55045500000006,
+			"latitude": 13.048769,
+			"imgPath": "gifimage.gif",
+			"toField": "",
+			"fromField": "",
+			"username": "TestUser",
+			"userId": "user_Testuser123",				
+			"anonymous": true,
+			"nswf": null,
+			"expand": false,
+			"enableNotificationFromUser": true,
+			"eventDate":"",
+			"eventDescription":"",
+			"caption":"Caption for Visual Graphics",
+			"postQuestion":"",
+			"postThought":"",
+			"postLink":"",
+		    "postDescription":"",	
+			"savedPost":false,			    		
+			"voteDetails": {
+				"voteCount": 20,
+				"upVote": true,				
+				"downVote": false,
+				"upVotedTimeByMe": "",
+				"downVotedTimeByMe": "",		
+				"pushActivatedTimeByMe" : "",	
+				"pushCount": 2,									
+				"pushActivate": true,
+				"pushActivated": false,
+				"reportedNSFW": false,
+				"reportedIsNSFW": false,				
+				"reportedNSFWReason": ""
+			},
+			"comments": [{
+					"commentId": "P9C1",
+					"commentPostedBy": "User A",
+					"commentContent": "Comment1 Content",
+					"upVote": true,
+					"downVote": false,						
+					"voteCount": 4,
+					"commentPostedTime": "",
+					"replies": [{
+						"replyId": "P9C1R1",
+						"replyCommentBy": "Comment1 - Reply1",
+						"replyCommentContent": "Comment1 - Reply1 Content",
+						"voteCount": 2,
+						"replyCommentTime": "",
+						"upVote": false
+					}]
+				},
+				{
+					"commentId": "P9C2",
+					"commentPostedBy": "User B",
+					"commentContent": "Comment2 Content",
+					"upVote": false,
+					"downVote": true,						
+					"voteCount": 6,
+					"commentPostedTime": "",
+					"replies": [{
+						"replyId": "P9C1R1",
+						"replyCommentBy": "Comment2 - Reply1",
+						"replyCommentContent": "Comment2 - Reply1 Content",
+						"voteCount": 2,
+						"replyCommentTime": "",
+						"upVote": false
+					},
+					{
+						"replyId": "P9C1R2",
+						"replyCommentBy": "Comment2 - Reply2",
+						"replyCommentContent": "Comment2 - Reply2 Content",
+						"voteCount": 1,
+						"replyCommentTime": "",
+						"upVote": false
+					}]
+				},
+				{
+					"commentId": "P9C3",
+					"commentPostedBy": "User C",
+					"commentContent": "Comment3 Content",
+					"upVote": false,
+					"downVote": false,						
+					"voteCount": 4,
+					"commentPostedTime": "",
+					"replies": [{
+						"replyId": "P9C3R1",
+						"replyCommentBy": "Replier1",
+						"replyCommentContent": "Comment7 - Reply1 Content",
+						"voteCount": 1,
+						"replyCommentTime": "",
+						"upVote": false
+					},
+					{
+						"replyId": "P9C3R2",
+						"replyCommentBy": "Replier2",
+						"replyCommentContent": "Comment7 - Reply2 Content",
+						"voteCount": 1,
+						"replyCommentTime": "",
+						"upVote": false
+					}]
+				}
+																																												
+			]
+
+		}
+		
+		
+		
+
+		
+
+
+
+
+	]
+}

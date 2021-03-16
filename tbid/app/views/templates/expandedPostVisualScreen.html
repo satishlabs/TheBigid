@@ -1,0 +1,480 @@
+	<div ng-if="data.expand" class="post-expanded generalbgcolor" ng-init="checkVoteDefaultCase()">
+        <!-- EXPANDED POST - START -->
+        <div class="row" ng-show="showPostServerError">
+         	<div class="col-lg-12 text-center marginTop10 marginBottom10">
+            <h5><span class="customized-error-message-small" ng-show="showPostServerError">{{postServerError}}</span></h5>
+            </div>
+        </div>
+       <div ng-init="openCommentsSection = false;" ng-show="!openCommentsSection"	class="row row-eq-height post-body-container">
+          
+
+
+			<div class="col-lg-6 col-lg-offset-1 col-md-6 col-md-offset-1 col-sm-6" ng-hide="showFollowNotifySection">
+
+                 <div class="row marginBottom10 to-from">
+                        <span  ng-class="{'post-expanded-visualbody-To marginTop10': data.fromField,'post-expanded-visualbody-To-only marginTop10': !data.fromField}"
+                        	   ng-show="data.toField" data-toggle="tooltip" data-placement="bottom" title="{{data.toField}}"><b>To :</b> {{data.toField | truncateToFrom:18}}</span>
+                        <div ng-show="data.toField && data.fromField" class="divider-vertical"></div>
+			     		<span ng-class="{'post-expanded-visualbody-From': data.toField,'post-expanded-visualbody-From-only': !data.toField}"
+			     			  ng-show="data.fromField" data-toggle="tooltip" data-placement="bottom" title="{{data.fromField}}"><b>From :</b> {{data.fromField | truncateToFrom:18}}</span>
+                 </div>
+
+
+			    <div class="row marginBottom10">
+			    <!--  Latest Changes - START  -->
+			    		
+			    		<h1 class="post-expanded-body-title">{{data.title}}</h1>
+						<p class="post-expanded-body">{{data.body}}</p>
+
+                <!--  Latest Changes - END  -->
+					<p class="marginBottom30" ng-click="(!checkOwnerOfThePost(data.userId))?showFollowNotifySection=true:''" ng-show="data.anonymous==false">- <i class="customUserName">{{data.username}}</i></p>
+				</div>
+
+<!-- 				<div class="row marginBottom10">
+			     		<h1 class="post-expanded-body-From" ng-show="data.fromField">From : {{data.fromField}}</h1>
+			     		<h1 class="post-expanded-body-From" ng-hide="data.fromField"></h1>
+			  	</div> -->
+			  	
+			  	<div class="row marginBottom10">
+			  	        <div class="textDisplayRHSMiniPost" ng-show="data.location !== null"><b>Location:</b> {{data.location}}</div>
+                        <div ng-init="formatDateToDisplay(data.postCreatedTime)" class="textDisplayRHSMiniPost marginTop10">{{displayTimeInfo}}</div>
+			  	</div>
+			  				  	
+			</div>
+			
+			<!-- FOLLOW NOTIFICATION SECTION - START -->
+			<div class="col-lg-6 col-lg-offset-1 col-md-6 col-md-offset-1 col-sm-6" ng-show="showFollowNotifySection">
+					<div class="row marginTop10 marginBottom10">
+								 <div class="col-lg-12 col-md-12 col-sm-12">
+											<h1 class="post-expanded-body-title">{{data.title}}</h1>
+								  </div>
+				    </div>
+					<div class="row">
+						  <div class="col-lg-12 col-md-12 col-sm-12">
+							          <div class="followSection">
+							                  <div class="row marginBottom10">
+								                  		 	<div class="col-lg-12">
+								                  				<h5><b><i>- {{data.username}}</i></b></h5>
+								                  		 	</div>
+								               </div>
+								               <div class="row marginBottom10">
+								                         <div class="col-lg-4 col-md-4 col-sm-4">
+							                         		<div class="row">
+									                             <div class="col-lg-12" ng-init="checkWhetherAFollower(data.createdBy);">
+									                               <!-- <span class="customized-error-message-small" ng-show="followSectionError"><h6>{{followSectionErrorMsg}}</h6></span> -->
+											                    	<input ng-show="loggedInUserFollowing" type="button" class="btn btn-primary" value="Following"/>
+											                    	<input ng-hide="loggedInUserFollowing" type="button" class="btn btn-default" value="Follow" ng-click="followUserUpdate(data.id,data.userId,'follow')"/>
+									                             </div>
+									                      	</div>	
+								                         </div>
+								                   		 <div class="col-lg-6 col-md-6 col-sm-6">
+								                   		 		<span>Post Notifications
+										                    		<span class="followToggle">
+										                    			<label class="switch">
+										  									<input type="checkbox" ng-model="data.postNotification" ng-click="updateNotificationForUserPost(data.userId,data.postNotification,data.id)">
+										  									<div class="slider round"></div>
+																		</label>
+																	</span>
+										                    	</span>
+								                   		 </div>
+							                    </div>
+							                    <div class="row">
+								                         <div class="col-lg-12">
+								                        		<span class="glyphicon glyphicon-menu-left" ng-click="showFollowNotifySection=false;clearFollowSectionFlags();"></span>     
+								                         </div>     
+								                </div>
+							          </div>
+					     </div>
+				 </div>
+			</div>
+			<!-- FOLLOW NOTIFICATION SECTION - END -->			
+			
+           <div class="col-lg-3 col-md-3 col-sm-3">
+           		<div class="post-image-container-expanded" align="center">
+					<img ng-src="{{data.imgPathDisplay}}" class="img-responsive">
+				</div>
+           </div>
+           
+
+			
+           <div class="col-lg-1 col-md-1 col-sm-1">
+           		<div class="upvoteDownvoteClickcase">
+				<div 
+					ng-show="data.voteDetails.pushActivate && userdata.pushAvailabilityNo > 0 && (!checkOwnerOfThePost(data.userId))"
+					class="upVote-pushRemaining-style">
+					{{userdata.pushAvailabilityNo}}
+					<button ng-hide="data.voteDetails.pushActivated"
+						style="border: none;"
+						class="glyphicon glyphicon-hand-up generalbgcolor" 
+						ng-disabled="disablePushforThisPost && data.voteDetails.pushActivated"
+						ng-click="doPushUpVote(data.id,data.voteDetails.voteCount,$index);disablePushforThisPost=true;data.voteDetails.pushActivated=true;">
+					</button>
+					<button ng-show="data.voteDetails.pushActivated"
+						style="border: none;"
+						class="glyphicon glyphicon-hand-up ClickedStatusYes generalbgcolor" 
+						ng-disabled="disablePushforThisPost && data.voteDetails.pushActivated">
+					</button>					
+				</div> 
+
+				<div class="downVoteClick" 
+					ng-show="(data.voteDetails.reportedNSFW && (!checkOwnerOfThePost(data.userId)))"
+					class="upVote-pushRemaining-style">
+					<button ng-hide="data.voteDetails.reportedIsNSFW"
+						style="border: none;" 
+						class="glyphicon glyphicon-warning-sign generalbgcolor" 
+						ng-disabled="data.voteDetails.reportedIsNSFW"	
+						ng-click="downVotedTag(data.id,data.title);">
+					</button>					
+					<button ng-show="data.voteDetails.reportedIsNSFW"
+						style="border: none;" 
+						class="glyphicon glyphicon-warning-sign ClickedStatusYes generalbgcolor" 
+						ng-disabled="data.voteDetails.reportedIsNSFW"	
+						ng-click="downVotedTag(data.id,data.title);">
+					</button>
+				</div>
+			 </div>
+           </div>
+           
+           
+			<div class="col-lg-2 col-md-2 col-sm-2">
+				<div class="row">
+					<div class="col-sm-2 votes" style="position:relative">
+            		<span ng-click="expand()" class="glyphicon glyphicon-remove fa-lg class-close"></span>
+						<ul>
+
+							<li>
+								<button ng-hide="data.voteDetails.upVote"
+								  style="border: none;"
+								  ng-disabled="data.voteDetails.upVote"
+								  ng-click="doUpVote(data.id,data.voteDetails.voteCount);upVoteAvail=false;downVoteAvail=true;"
+								  class="glyphicon glyphicon-menu-up generalbgcolor">
+								</button>
+								<button ng-show="data.voteDetails.upVote"
+								  style="border: none;"
+								  ng-disabled="data.voteDetails.upVote"
+								  ng-click="doUpVote(data.id,data.voteDetails.voteCount);upVoteAvail=false;downVoteAvail=true;"
+								  class="glyphicon glyphicon-menu-up ClickedStatusYes generalbgcolor">
+								</button>								
+							</li>
+							<li class="vote-count"><span>{{data.voteDetails.voteCount|| 0}}</span></li>
+							<li>
+								<button ng-hide="data.voteDetails.downVote"
+									style="border: none;"
+									ng-disabled="data.voteDetails.downVote"
+									ng-click="doDownVote(data.id,data.voteDetails.voteCount);upVoteAvail=true;downVoteAvail=false;"
+									class="glyphicon glyphicon-menu-down generalbgcolor">
+								</button>
+								<button ng-show="data.voteDetails.downVote"
+									style="border: none;"
+									ng-disabled="data.voteDetails.downVote"
+									ng-click="doDownVote(data.id,data.voteDetails.voteCount);upVoteAvail=true;downVoteAvail=false;"
+									class="glyphicon glyphicon-menu-down ClickedStatusYes generalbgcolor">
+								</button>								
+							</li>
+						</ul>
+					</div>
+				</div>
+
+				<div class="row save-row">
+					<div class="col-sm-2 save">
+						<ul>
+							<li>
+							  <div class="plus-item" ng-init="checkForSaved(data.id)">
+							  
+									<!-- <i class="glyphicon glyphicon-plus" ng-click="addTagsExpand(data.userId);"></i> -->
+								<i	ng-class="{'glyphicon glyphicon-plus' : !data.postSavedbythisUser,'glyphicon glyphicon-plus ClickedStatusYes' : data.postSavedbythisUser}"
+								    ng-click="savePost(data.id);addTagsExpand(data.userId);"></i>
+							   </div>
+							</li>
+							<li class="plus-count"><span>{{data.savedPostCount}}</span></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			
+			
+        </div>
+        
+		<hr ng-show="!openCommentsSection">
+
+<!-- EXPANDED POST  - BOTTOM SECTION  - START -->
+		<div ng-show="!openCommentsSection"	class="row">
+		  
+		  <!-- Comments section - START -->
+			<div class="col-sm-2">
+				<div class="row">
+					<div class="col-sm-12" align="center" ng-click="openCommentsSection = true;resetCommentsSection();resetPostErrors();">Comments</div>
+				</div>
+				<div class="row">
+					<div class="col-sm-12" align="center">
+						<div class="comments-count">{{data.comments.length}}</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-sm-4 right-bordered comment-body" align="center" ng-show="data.comments.length > 0" ng-init="checkHighestLikedComment(data.comments)">
+				<!-- {{data.comments[data.comments.length-1].commentContent}} -->
+				{{displayComment}}
+			</div>
+			<div class="col-sm-4 right-bordered comment-body" ng-show="data.comments === undefined || data.comments.length === 0">
+				<p></p><p></p>
+				<i>-- No Comments yet --</i> 
+			</div>	
+			
+			 <!-- Comments section - END -->
+			
+			
+			
+			 <!-- Tags section - START -->		
+			<div class="col-sm-4 tags right-bordered">
+				<div class="row marginLeft5">Tags</div>	
+				<div class="row">
+				   <div class="col-lg-12 col-md-8 col-sm-8">
+				   				<ul class="posttagsSection"  ng-show="data.tags.length > 0"> 
+									<li ng-repeat="tag in data.tags track by $index | limitTo : 4">{{tag}}</li>					
+								</ul>
+								<ul class="posttagsSection" align="center" ng-show="data.tags === undefined || data.tags.length === 0"> 
+									<p></p><i>-- No Tags yet --</i>
+								</ul>	
+				   </div>
+				   <!-- <div class="col-lg-2 col-md-8 col-sm-8">
+				       <img ng-src="./images/tagicon.jpg" class="tagAddButton" ng-click="addTagsExpand(data.userId);">
+				   </div> -->
+				</div>					
+			</div>
+			 <!-- Tags section - END -->
+			
+			
+			
+			 <!-- Label section - START -->	
+			<div class="col-sm-2">
+				<div class="row">
+					<div class="col-sm-12">Label</div>
+				</div>
+				<div class="row">
+					<div class="col-sm-6" align="center">
+						 <div ng-show="data.postCategory!=='____'" class="labelName">{{data.postCategory}}</div>
+						 <div ng-show="data.postCategory==='____'" class="labelName">{{data.postUserInputCategory}}</div>
+					</div>
+									
+					<div class="col-sm-2" align="center">
+
+						<span class="icon glyphicon" ng-show="data.postType !== 'GENERAL'"
+							  ng-class="{
+            							'glyphicon-arrow-right': data.postType==='LINK',
+            							'glyphicon-question-sign': data.postType==='QUESTION',
+           								'glyphicon-picture': data.postType==='VISUAL',
+            							'glyphicon-calendar': data.postType==='EVENT'
+            							
+          						 		 }" aria-hidden="true"></span>
+          				<!-- 'glyphicon-info-sign': data.postType==='GENERAL' -->
+						<span class="" aria-hidden="true" ng-show="data.postType==='GENERAL'">
+									<img ng-src="./images/defaultgeneral.png" class="expandedPostGeneralImage">
+						</span>	          						 		 						
+					</div>
+					
+
+				</div>
+			</div>
+			 <!-- Label section - END -->	
+			
+			
+			
+			
+		</div>
+<!-- EXPANDED POST  - BOTTOM SECTION  - END -->
+
+		<!-- Add Tags Expansion - START -->
+		<div ng-show="openAddTagsExpansion && !openCommentsSection" class="row row-eq-height post-footer-tagExpand">
+				<div class="col-sm-2">
+				    <h5> Add Tags :</h5>
+				</div>
+				<div class="col-sm-8">
+				     <textarea rows=1  class="form-control textboxTagsInput" placeholder="Add tags, separated by commas" ng-model="data.tagsAdded"></textarea>
+				</div>
+			    <div class="col-sm-2">
+			         <input type="button" ng-disabled="data.tagsAdded==''" class="btn btn-primary" value="Done" ng-click="updateTagsAdded(data.id,data.tagsAdded);">
+			    </div>
+		</div>
+		<!-- Add Tags Expansion - END -->
+ 
+       <!-- EXPANDED POST - END -->
+
+
+
+			<!--EXPANDED COMMENTS SECTION - START -->
+		
+		<div ng-show="openCommentsSection">
+		
+				<div class="row">
+							<div class="col-lg-6 col-md-8 col-sm-8">
+							     <div class="row marginTop20">
+							     	<div class="col-lg-1 col-md-1 col-sm-1">
+								   		<span class="glyphicon glyphicon-menu-left" style="font-size: 20px;" ng-click="openCommentsSection=false;resetPostErrors();checkHighestLikedComment(data.comments);"></span> 
+								   	</div>
+								   	<div class="col-lg-11 col-md-11 col-sm-11">Comments</div>
+							     </div>
+                                  <div class="row">
+                                      <div class="col-lg-1 col-md-1 col-sm-1"></div>
+                                       <div class="col-lg-11 col-md-11 col-sm-11">
+                                           	<div class="commentsSection">
+															<div align="center" ng-show="data.comments === undefined || data.comments.length === 0">
+																<i>-- No Comments yet --</i>
+															</div>
+						
+															<div ng-repeat="commentPick in data.comments">
+											                      <div ng-show="commentPick.showcomments">
+																	<div class="commentBox box-shadow">
+																		<div class="commentOfPost">
+																			<div class="postCommentExpandMessages"><b><i>{{commentPick.commentPostedBy}} </i>:</b> {{commentPick.commentContent}}</div>
+																			<div>
+																				<ul class="commentsEntryVote">
+																					<li>
+											                                  			<button ng-show="commentPick.commentVoteDetails.upVote" 
+								  															style="border: none;"
+																							ng-disabled="commentPick.commentVoteDetails.upVote"
+																							ng-click="doCommentUpVote(data.id,commentPick.commentId,$index);upVoteCommentAvail=false;downVoteCommentAvail=true;"
+																							class="glyphicon glyphicon-menu-up ClickedStatusYes generalbgcolor">
+																						</button>
+											                                  			<button ng-hide="commentPick.commentVoteDetails.upVote" 
+											                                  			    style="border: none;" 
+																							ng-disabled="commentPick.commentVoteDetails.upVote"
+																							ng-click="doCommentUpVote(data.id,commentPick.commentId,$index);upVoteCommentAvail=false;downVoteCommentAvail=true;"
+																							class="glyphicon glyphicon-menu-up generalbgcolor">
+																						</button>															
+																					</li>
+																					<li class="vote-count" style="float:right"><span>{{commentPick.commentVoteDetails.voteCount || 0}}</span></li>
+																					<li>
+																							<button ng-show="commentPick.commentVoteDetails.downVote"
+																							    style="border: none;"
+																								ng-disabled="commentPick.commentVoteDetails.downVote"
+																								ng-click="doCommentDownVote(data.id,commentPick.commentId,$index);upVoteCommentAvail=true;downVoteCommentAvail=false;"
+																								class="glyphicon glyphicon-menu-down ClickedStatusYes generalbgcolor">
+																							</button>
+																							<button ng-hide="commentPick.commentVoteDetails.downVote"
+																							    style="border: none;"
+																								ng-disabled="commentPick.commentVoteDetails.downVote"
+																								ng-click="doCommentDownVote(data.id,commentPick.commentId,$index);upVoteCommentAvail=true;downVoteCommentAvail=false;"
+																								class="glyphicon glyphicon-menu-down generalbgcolor">
+																							</button>															
+																					</li>
+																				</ul>
+																			</div>
+																		</div>
+																	</div>
+															
+																	<button class="btn btn-default showReplyButton"  style="float: right" ng-click="commentPick.showreplies=!commentPick.showreplies;showrepliesfunc(commentPick.replies,commentPick.showreplies,commentPick.commentId);expandReplies($index,commentPick.showreplies);">
+																		<i><b class="font-size-10">replies ({{commentPick.replies.length || 0}})</b></i>
+																	</button>  
+								                     			</div>
+														
+																<!-- The Reply block of the comments - START -->
+															
+																
+																 	<div class="row" ng-show="commentPick.showcommentsreplies">
+																	    <div class="col-lg-12 col-md-12 col-sm-12" style="width:90%;">
+																				<div class="replyCommentExpansion">
+																	  				 <div ng-repeat="reply in commentPick.replies">
+																	    				 <hr/>  
+																	   					 <p class="font-size-14"><b><i>{{reply.replyCommentBy}}</i> :</b> {{reply.replyCommentContent}}</p> 						    
+																	   					 <p class="replyCommentLikeStyle marginTop5">
+																	    					<button class="glyphicon glyphicon-menu-up replyCommentLikeStatusLiked" ng-show="reply.postReplyCommentVote.upVote" style="border: none;background: rgba(242,242,242,.6);" ng-click="clickedOnReplyCommentLikeButton($index,$parent.$index,commentPick.replies[$index].replyId)"></button>
+																	   						<button class="glyphicon glyphicon-menu-up replyCommentLikeStatusNotLiked" ng-hide="reply.postReplyCommentVote.upVote" style="border: none;background: rgba(242,242,242,.6);" ng-click="clickedOnReplyCommentLikeButton($index,$parent.$index,commentPick.replies[$index].replyId)"></button>						    
+																	    					{{reply.postReplyCommentVote.voteCount || 0}}</p>
+																	  				 </div>
+																					 <hr/>
+																					 <textarea  class="newReplyCommentTextField marginTop5" ng-model="newreplymsgcontent"></textarea> 
+																					 <input class="btn btn-create marginTop5 newReplyCommentTextButton" type="button" value="Reply" user-enter-key-press="callEnterFunc($event)"
+																					      ng-click="postReply(data.id,newreplymsgcontent,parentCommentIdForReply,$index);newreplymsgcontent='';">
+																					
+																   						<span class="customized-error-message-small" ng-show="newreplymsgcontent==''"><h6>{{errorMessageForReply}}</h6></span>
+																					
+																 				</div>
+															 				</div>
+																	</div>
+													
+															  
+																<!-- The Reply block of the comments - END -->	
+								
+														<div>
+															<p></p>
+														</div>
+								
+													</div>
+											</div>                                       
+                                       </div>
+                                  </div>
+								   
+
+							</div>
+			
+			
+							<!-- Post Preview Section - START -->
+							<div class="col-lg-4 col-md-4 col-sm-4" ng-show=true ng-init="newComment=''">
+							    
+								<div class="row marginTop20">	
+								    <div class="col-lg-4 col-md-4 col-sm-4">
+								    	<img ng-src="{{data.imgPathDisplay}}" class="imageCommentsSection" style="float:left;">
+								    </div>									
+									<div class="col-lg-8 col-md-8 col-sm-8 pull-right customExpandedPostTitleAlign">
+											<span class="titleCommentsSection" ng-show="data.postType==='GENERAL'">{{data.title|truncate:titleCharCount}}</span>
+											<span class="titleCommentsSection" ng-show="data.postType==='VISUAL'">{{data.title|truncate:titleCharCount}}</span>
+											<span class="titleCommentsSection" ng-show="data.postType==='QUESTION'">{{data.title|truncate:titleCharCount}}</span>
+											<span class="titleCommentsSection" ng-show="data.postType==='LINK'"><a href={{data.title}} target="_blank">{{data.title|truncate:titleCharCount}}</a></span>
+											<span class="titleCommentsSection" ng-show="data.postType==='EVENT'" ng-init="formatDate(data.eventDate)">{{eventDateDisplay}}</span>
+								    </div>
+				                 </div>
+								 <div class="row">
+								     <div class="col-lg-12 col-md-12 col-sm-12">
+										  <p>{{data.body|truncate:bodyCharCount}}</p>
+									  </div>
+								 </div>
+								 <div class="row" ng-show="data.anonymous==false" >
+								       <div class="col-lg-12 col-md-12 col-sm-12 pull-right">
+									 		 <p  style="text-align: right;">-{{data.username}}</p>
+									   </div>
+								 </div>
+								 <div class="row marginTop10">
+									  <hr/>
+								 </div>
+								 <div class="row marginTop10">
+								    	<div class="col-lg-12 col-md-12 col-sm-12">						
+											<div class="row">
+											    <div class="col-lg-12 col-md-12 col-sm-12">	
+												<h6>Comment Entry:</h6>
+												</div>
+											</div>
+											<div class="row marginTop5">
+											    <div class="col-lg-12 col-md-12 col-sm-12">	
+											    <textarea  class="newCommentTextField" ng-model="newComment"></textarea>
+											    </div>
+											</div>
+											<div class="row">
+											    <div class="col-lg-12 col-md-12 col-sm-12">	
+												<input class="btn btn-create marginTop5" type="button" value="Post" user-enter-key-press="callEnterFunc($event)"
+													ng-click="postComment(data.id,newComment,data.userId);
+											          		  resetCommentsSectionOnComment();
+											                  newComment='';">  
+											     </div>    
+											</div>
+											<div class="row">
+											   <div class="col-lg-12 col-md-12 col-sm-12">	
+											   <span class="customized-error-message-small" ng-show="newComment==''"><h6>{{errorMessageForComment}}</h6></span>
+											   </div>
+											</div>
+										</div>
+								 </div>
+							</div>
+							
+							<!-- Post Preview Section - END -->
+			
+			
+			                <!-- Comment,Vote,Tags Count Display section - START -->						
+							<div ng-include="'views/templates/voterelateddetails.html'"></div>
+			 				<!-- Comment,Vote,Tags Count Display section - END -->
+				</div>
+
+		</div>
+		<!--EXPANDED COMMENTS SECTION - END -->
+
+		
+	</div>

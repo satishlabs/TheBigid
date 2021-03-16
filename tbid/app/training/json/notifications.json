@@ -1,0 +1,79 @@
+{
+	"notifications": [{
+		"notification1": {
+			"byuser": "User 1",
+			"notifyaction": "Upvote",
+			"timeupdated": "Wed May 9 2017 09:00:00 GMT+0530 (India Standard Time)",
+			"postid" : 3,
+			"commentid" : "P1C1",
+			"posttitle" : "The City of London",
+			"readstatus": "read",
+			"accessurltocheck" : "./temp/json/notificationDetail_london.json",
+			"accessurltocheck1" : "/postnotif/3/upvote"
+		},
+		"notification2": {
+			"byuser": "User 2",
+			"notifyaction": "NewComment",
+			"timeupdated": "Wed May 9 2017 10:00:00 GMT+0530 (India Standard Time)",
+			"postid" : 5,
+			"commentid" : "P2C1",
+			"posttitle" : "Design Thinking Event in Bangalore",			
+			"readstatus": "unread",		
+			"accessurltocheck" : "./temp/json/notificationDetail_designthinking.json",
+			"accessurltocheck1" : "/postnotif/5/newcomment"
+		},
+		"notification3": {
+			"byuser": "User 3",
+			"notifyaction": "UpvotePush",
+			"timeupdated": "Wed May 9 2017 11:00:00 GMT+0530 (India Standard Time)",
+			"postid" : 5,
+			"commentid" : "P2C1",
+			"posttitle" : "Design Thinking Event in Bangalore",			
+			"readstatus": "read",			
+			"accessurltocheck" : "./temp/json/notificationDetail_designthinking.json",
+			"accessurltocheck1" : "/postnotif/3/upvotepush"		
+		},
+		"notification4": {
+			"byuser": "Rocky",
+			"notifyaction": "NewPost",
+			"timeupdated": "Wed May 10 2017 11:44:00 GMT+0530 (India Standard Time)",
+			"postid" : 5,
+			"commentid" : "P2C1",
+			"posttitle" : "Republic TV",			
+			"readstatus": "unread",			
+			"accessurltocheck" : "./temp/json/notificationDetail_newpost.json",
+			"accessurltocheck1" : "/postnotif/newpost"
+		},
+		"notification5": {
+			"byuser": "User 5",
+			"notifyaction": "Downvote",
+			"timeupdated": "Wed May 9 2017 13:00:00 GMT+0530 (India Standard Time)",
+			"postid" : 16,
+			"commentid" : "P7C2",
+			"posttitle" : "Stone Pelting on Indian Soldiers",			
+			"readstatus": "read",		
+			"accessurltocheck" : "./temp/json/notificationDetail_stonepelting.json",
+			"accessurltocheck1" : "/postnotif/3/downvote"			
+		},
+		"notification6": {
+			"byuser": "User 6",
+			"notifyaction": "NewReply",
+			"timeupdated": "Wed May 9 2017 14:00:00 GMT+0530 (India Standard Time)",
+			"postid" : 16,
+			"commentid" : "P7C2",
+			"posttitle" : "Stone Pelting on Indian Soldiers",			
+			"readstatus": "unread",		
+			"accessurltocheck" : "./temp/json/notificationDetail_newreplycomment.json",
+			"accessurltocheck1" : "/postnotif/16/newreply"
+		},
+		"notification7": {
+			"byuser": "User 7",
+			"notifyaction": "NewFollow",
+			"timeupdated": "Wed May 9 2017 15:00:00 GMT+0530 (India Standard Time)",	
+			"readstatus": "unread",	
+			"accessurltocheck" : "",
+			"accessurltocheck1" : "/usernotif/followlist"
+		}		
+				
+	}]
+}
